@@ -1,813 +1,831 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="NachoSAG - Software Engineer. Building systems that work under pressure. Specializing in architecture, distributed systems, and clean code.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NACHOSAG // SOFTWARE ENGINEER</title>
+<meta name="description" content="Ignacio Borlenghi — Software Engineer. Building backend systems, distributed architectures, and clean solutions that work under pressure.">
 
-  <!-- Open Graph / LinkedIn / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nachosag.github.io/portfolio/">
-  <meta property="og:title" content="NachoSAG | Software Engineer">
-  <meta property="og:description"
-    content="Software Engineer passionate about system design, distributed systems, and building systems that scale without drama.">
-  <meta property="og:image" content="https://nachosag.github.io/portfolio/assets/og-image.png">
+<!-- Open Graph / LinkedIn / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nachosag.github.io/portfolio/">
+<meta property="og:title" content="NACHOSAG | Software Engineer">
+<meta property="og:description" content="Software Engineer passionate about system design, architecture, and building things that scale without drama.">
+<meta property="og:image" content="https://nachosag.github.io/portfolio/assets/og-image.png">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://nachosag.github.io/portfolio/">
-  <meta property="twitter:title" content="NachoSAG | Software Engineer">
-  <meta property="twitter:description"
-    content="Software Engineer passionate about system design, distributed systems, and building systems that scale without drama.">
-  <meta property="twitter:image" content="https://nachosag.github.io/portfolio/assets/og-image.png">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://nachosag.github.io/portfolio/">
+<meta property="twitter:title" content="NACHOSAG | Software Engineer">
+<meta property="twitter:description" content="Software Engineer passionate about system design, architecture, and building things that scale without drama.">
+<meta property="twitter:image" content="https://nachosag.github.io/portfolio/assets/og-image.png">
 
-  <title>NachoSAG | Software Engineer</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="512x512" href="assets/favicon-512.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="assets/favicon-512.png">
-</head>
-
-<body>
-  <main>
-    <div class="grid-bg"></div>
-
-    <!-- NAV -->
-    <nav>
-      <div class="nav-logo">NACHOSAG.DEV</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#explorer">Explorer</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#workflow">Workflow</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- HERO -->
-    <section id="hero">
-      <div class="container hero-container">
-        <div class="hero-main">
-          <h1 class="hero-name">NACHO<span>SAG</span></h1>
-          <p class="hero-role">Software Engineer</p>
-          <p class="hero-desc">
-            I build <strong>systems that work under pressure</strong>. From REST APIs to clustering algorithms, my work
-            lives at the intersection of <strong>clean architecture</strong> and <strong>pragmatic engineering</strong>.
-          </p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn-primary">
-              <svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-              VIEW PROJECTS
-            </a>
-            <a href="https://github.com/nachosag" target="_blank" class="btn-secondary">
-              <svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              GITHUB
-            </a>
-          </div>
-        </div>
-        <div class="hero-neofetch">
-          <div class="terminal">
-            <div class="terminal-bar">
-              <div class="terminal-dot"></div>
-              <div class="terminal-dot"></div>
-              <div class="terminal-dot"></div>
-              <span class="terminal-title">neofetch</span>
-            </div>
-            <div class="terminal-body">
-              <div><span class="t-prompt">$ </span><span class="t-cmd">neofetch</span></div>
-              <div>&nbsp;</div>
-              <div><span class="t-key">OS</span>       <span class="t-val">Ubuntu 24.04 LTS</span></div>
-              <div><span class="t-key">Shell</span>    <span class="t-val">bash</span></div>
-              <div><span class="t-key">Lang</span>     <span class="t-val">TypeScript · Python</span></div>
-              <div><span class="t-key">Flow</span>     <span class="t-val">SDD · Gentle AI</span></div>
-              <div><span class="t-key">Arch</span>     <span class="t-val">Clean · Hexagonal</span></div>
-              <div><span class="t-key">Loc</span>      <span class="t-val">Buenos Aires, AR</span></div>
-              <div><span class="t-key">Status</span>   <span class="t-val highlight">● Available</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">ABOUT</div>
-          <h2 class="section-title">ENGINEER<span>ING</span> MINDSET</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I'm a software engineer passionate about <strong>system design</strong> and the kind of problems that
-              don't
-              have obvious solutions. I gravitate toward architecture decisions, data modeling, and the mechanics of
-              making things <strong>fast, reliable, and maintainable</strong>.
-            </p>
-            <p>
-              My work spans from building complete <strong>full-stack systems</strong> — REST APIs with FastAPI and
-              Express, React SPAs, serverless edge platforms on Cloudflare Workers — to implementing graph algorithms
-              like Kruskal's MST from scratch. I believe in understanding what happens under the hood — not just wiring
-              libraries together.
-            </p>
-            <p>
-              Recently delivered a <strong>fully serverless platform</strong> (NotebookLM Gallery) running globally at
-              edge with Cloudflare Workers, D1, and R2 at $0/month. Deepening expertise in <strong>distributed
-                systems</strong>, non-relational data modeling (Cassandra, MongoDB patterns), and low-level systems
-              architecture.
-            </p>
-          </div>
-          <div class="about-cards">
-            <div class="about-card">
-              <div class="about-card-title">// PRIMARY_FOCUS</div>
-              <p>Software architecture, distributed systems, database design, and building systems that scale without drama.</p>
-            </div>
-            <div class="about-card">
-              <div class="about-card-title">// SECONDARY_INTEREST</div>
-              <p>Algorithm implementation, graph theory, data processing pipelines, and non-relational data modeling.</p>
-            </div>
-            <div class="about-card">
-              <div class="about-card-title">// CURRENTLY_EXPLORING</div>
-              <p>Serverless edge patterns, distributed database architectures, and hardware-level performance optimization.</p>
-            </div>
-            <div class="about-card">
-              <div class="about-card-title">// ENGINEERING_STYLE</div>
-              <p>Concepts first, then code. If you don't understand why, the implementation doesn't matter.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURED PROJECTS -->
-    <section id="projects">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">SELECTED WORK</div>
-          <h2 class="section-title">FEATURED <span>PROJECTS</span></h2>
-        </div>
-        <div class="featured-grid">
-
-          <div class="project-card featured">
-            <div class="corner-decor corner-tl"></div>
-            <div class="corner-decor corner-br"></div>
-            <div class="project-id">// PROJECT_001</div>
-            <h3 class="project-name">SIGRH+</h3>
-            <p class="project-desc">ERP/CRM system for HR management with integrated AI. Built in a 6-person Scrum team
-              (5
-              sprints, Jira). Covers recruitment with NLP-based CV filtering, facial recognition attendance, payroll
-              automation, analytics, and an LLM-powered chatbot — all running fully offline.</p>
-            <div class="project-challenge">
-              <div class="project-challenge-label">TECHNICAL CHALLENGE</div>
-              <p>Building a modular NLP engine that processed hundreds of CVs in seconds against configurable
-                recruiter-defined tags, saving ~10 man-hours per recruitment cycle. LLM integration via Ollama kept
-                everything local — zero external API dependency.</p>
-            </div>
-            <div class="project-tech">
-              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Ollama</span><span>NLP</span><span>Docker
-                Compose</span><span>Next.js</span>
-            </div>
-            <a href="https://github.com/nachosag/sigrh" target="_blank" class="project-link">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              GITHUB/SIGRH
-            </a>
-          </div>
-
-          <div class="project-card featured">
-            <div class="corner-decor corner-tl"></div>
-            <div class="corner-decor corner-br"></div>
-            <div class="project-id">// PROJECT_002</div>
-            <h3 class="project-name">CDM CALCULATOR</h3>
-            <p class="project-desc">Tool for finding the Minimum Dominating Set in large-scale graphs — an NP-Hard
-              optimization problem. Implements both exact Backtracking with recursion-tree pruning and Greedy Heuristics
-              for fast approximations. Includes an interactive graph editor built from scratch in Java AWT and a JUnit
-              stress testing suite.</p>
-            <div class="project-challenge">
-              <div class="project-challenge-label">TECHNICAL CHALLENGE</div>
-              <p>Pruning the recursion tree aggressively enough to process dense graph instances that would otherwise
-                exhaust memory. Balancing exact solutions (backtracking) vs. fast approximations (greedy) and exposing
-                both through a visual, interactive interface.</p>
-            </div>
-            <div class="project-tech">
-              <span>Java</span><span>Backtracking</span><span>Greedy Heuristics</span><span>Java
-                AWT</span><span>GSON</span><span>JUnit</span>
-            </div>
-            <a href="https://github.com/nachosag/cdm-calculator" target="_blank" class="project-link">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              GITHUB/CDM-CALCULATOR
-            </a>
-          </div>
-
-          <div class="project-card featured">
-            <div class="corner-decor corner-tl"></div>
-            <div class="corner-decor corner-br"></div>
-            <div class="project-id">// PROJECT_003</div>
-            <h3 class="project-name">NOTEBOOKLM GALLERY</h3>
-            <p class="project-desc">Fully serverless community platform to share, discover, and vote on NotebookLM-generated
-              audio podcasts and PDFs. Runs globally at edge with zero fixed infrastructure cost.</p>
-            <div class="project-challenge">
-              <div class="project-challenge-label">TECHNICAL CHALLENGE</div>
-              <p>Building a complete serverless stack on Cloudflare's free tier — Workers, D1, R2 — with Turnstile spam
-                protection, IP-based rate limiting, FTS5 search, and &lt;150ms global page loads via vanilla HTML served
-                from CDN.</p>
-            </div>
-            <div class="project-tech">
-              <span>Cloudflare Workers</span><span>itty-router</span><span>D1</span><span>R2</span><span>Turnstile</span><span>Vitest</span><span>GitHub Actions</span>
-            </div>
-            <a href="https://github.com/nachosag/notebooklm-gallery" target="_blank" class="project-link">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              GITHUB/NOTEBOOKLM-GALLERY
-            </a>
-          </div>
-
-          <div class="project-card featured">
-            <div class="corner-decor corner-tl"></div>
-            <div class="corner-decor corner-br"></div>
-            <div class="project-id">// PROJECT_004</div>
-            <h3 class="project-name">MAKERDAO JOB MONITOR</h3>
-            <p class="project-desc">Long-running Node.js process that monitors the MakerDAO Sequencer contract on Ethereum
-              mainnet, detecting keeper activity and alerting through multiple channels. Built under no-framework
-              constraint.</p>
-            <div class="project-challenge">
-              <div class="project-challenge-label">TECHNICAL CHALLENGE</div>
-              <p>Working directly with smart contract ABIs — ethers.js for on-chain data, function selector computation
-                via ethers.id(), and a polling loop scanning 5,000+ blocks on startup. Full dependency injection across
-                every layer enabling complete unit test isolation.</p>
-            </div>
-            <div class="project-tech">
-              <span>TypeScript</span><span>Node.js</span><span>ethers.js</span><span>Discord API</span><span>Slack API</span><span>Docker</span><span>Vitest</span>
-            </div>
-            <a href="https://github.com/nachosag/wonderland-challenge" target="_blank" class="project-link">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              GITHUB/WONDERLAND-CHALLENGE
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECT EXPLORER -->
-    <section id="explorer">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">ALL REPOSITORIES</div>
-          <h2 class="section-title">PROJECT <span>EXPLORER</span></h2>
-        </div>
-
-        <div class="filter-bar">
-          <button class="filter-btn active" onclick="filterProjects('all')">ALL</button>
-          <button class="filter-btn" onclick="filterProjects('backend')">BACKEND</button>
-          <button class="filter-btn" onclick="filterProjects('algorithms')">ALGORITHMS</button>
-          <button class="filter-btn" onclick="filterProjects('serverless')">SERVERLESS</button>
-          <button class="filter-btn" onclick="filterProjects('fullstack')">FULL STACK</button>
-          <button class="filter-btn" onclick="filterProjects('cli')">CLI</button>
-          <button class="filter-btn" onclick="filterProjects('games')">GAMES</button>
-          <button class="filter-btn" onclick="filterProjects('academic')">ACADEMIC</button>
-        </div>
-
-        <div class="explorer-grid">
-
-          <div class="repo-card" data-cat="backend">
-            <div class="repo-header">
-              <div class="repo-name">sigrh</div>
-              <span class="repo-category cat-backend">BACKEND</span>
-            </div>
-            <p class="repo-desc">ERP/CRM for HR with AI. NLP CV filtering, facial recognition attendance, LLM chatbot
-              via
-              Ollama. Full offline, Scrum team of 6.</p>
-            <div class="repo-stack">
-              <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>Ollama</span><span>NLP</span><span>Docker
-                Compose</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/sigrh" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/sigrh
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="algorithms">
-            <div class="repo-header">
-              <div class="repo-name">cdm-calculator</div>
-              <span class="repo-category cat-algorithms">ALGORITHMS</span>
-            </div>
-            <p class="repo-desc">NP-Hard Minimum Dominating Set solver. Backtracking with pruning for exact solutions +
-              Greedy heuristics for fast approximations. Interactive graph editor in Java AWT.</p>
-            <div class="repo-stack">
-              <span>Java</span><span>Backtracking</span><span>Greedy</span><span>Java
-                AWT</span><span>GSON</span><span>JUnit</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/cdm-calculator" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/cdm-calculator
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="algorithms">
-            <div class="repo-header">
-              <div class="repo-name">human-clustering</div>
-              <span class="repo-category cat-algorithms">ALGORITHMS</span>
-            </div>
-            <p class="repo-desc">Groups people by affinity using graph theory. Manhattan distance → complete weighted
-              graph → Kruskal MST → BFS component detection. SOLID architecture, 100% test coverage on core logic.</p>
-            <div class="repo-stack">
-              <span>Java</span><span>Graph Theory</span><span>Kruskal</span><span>BFS</span><span>JUnit</span><span>Java
-                Swing</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/human-clustering" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/human-clustering
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="games">
-            <div class="repo-header">
-              <div class="repo-name">lights-out-game</div>
-              <span class="repo-category cat-games">GAMES</span>
-            </div>
-            <p class="repo-desc">Extended Lights Out puzzle in Java Swing. MVC architecture, inverse-disorder generation
-              to guarantee solvable levels, built-in optimal Solver, and JSON persistence for save states.</p>
-            <div class="repo-stack">
-              <span>Java</span><span>Java Swing</span><span>MVC</span><span>GSON</span><span>Singleton</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/lights-out-game" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/lights-out-game
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="backend experimentation">
-            <div class="repo-header">
-              <div class="repo-name">wonderland-challenge</div>
-              <span class="repo-category cat-experimentation">TECHNICAL CHALLENGE</span>
-            </div>
-            <p class="repo-desc">MakerDAO Sequencer job monitor. Polls Ethereum mainnet, detects keeper activity via
-              ethers.js contract ABI, alerts through Discord/Slack. Full dependency injection architecture with isolated
-              unit tests.</p>
-            <div class="repo-stack">
-              <span>TypeScript</span><span>Node.js</span><span>ethers.js</span><span>Discord API</span><span>Slack API</span><span>Docker</span><span>Vitest</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/wonderland-challenge" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/wonderland-challenge
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="academic backend">
-            <div class="repo-header">
-              <div class="repo-name">siu-guarani-clone</div>
-              <span class="repo-category cat-academic">ACADEMIC</span>
-            </div>
-            <p class="repo-desc">University management system clone. Business logic in PL/pgSQL Stored Procedures,
-              SERIALIZABLE transactions for concurrent enrollment, Go CLI for admin ops, BoltDB for historical backups.
-            </p>
-            <div class="repo-stack">
-              <span>Go</span><span>PostgreSQL</span><span>PL/pgSQL</span><span>BoltDB</span><span>CLI</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/siu-guarani-clone" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/siu-guarani-clone
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="backend serverless">
-            <div class="repo-header">
-              <div class="repo-name">notebooklm-gallery</div>
-              <span class="repo-category cat-experimentation">SERVERLESS</span>
-            </div>
-            <p class="repo-desc">Fully serverless community platform. Cloudflare Workers + D1 + R2. Turnstile spam protection, IP rate limiting, FTS5 search. $0/month.</p>
-            <div class="repo-stack">
-              <span>Cloudflare Workers</span><span>D1</span><span>R2</span><span>itty-router</span><span>Turnstile</span><span>Vitest</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/notebooklm-gallery" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/notebooklm-gallery
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="backend">
-            <div class="repo-header">
-              <div class="repo-name">async-api</div>
-              <span class="repo-category cat-backend">BACKEND</span>
-            </div>
-            <p class="repo-desc">Fully async Python backend. FastAPI → SQLAlchemy async → aiosqlite. DatabaseManager pattern, dependency override for test isolation.</p>
-            <div class="repo-stack">
-              <span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>aiosqlite</span><span>Pytest-asyncio</span><span>httpx</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/async-api" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/async-api
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="backend cli">
-            <div class="repo-header">
-              <div class="repo-name">github-activity-cli</div>
-              <span class="repo-category cat-backend">CLI</span>
-            </div>
-            <p class="repo-desc">CLI tool fetching GitHub user activity. Native fetch only, Zod validation, const dispatch table, 30+ tests. SDD methodology.</p>
-            <div class="repo-stack">
-              <span>TypeScript</span><span>Zod</span><span>Vitest</span><span>oxlint</span><span>SDD</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/github-activity-cli" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/github-activity-cli
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="backend fullstack">
-            <div class="repo-header">
-              <div class="repo-name">notes-app</div>
-              <span class="repo-category cat-backend">FULL STACK</span>
-            </div>
-            <p class="repo-desc">Full stack SPA. FastAPI + SQLModel backend, React + Zustand frontend. JWT auth, CRUD, categories, filtering. One-command setup.</p>
-            <div class="repo-stack">
-              <span>Python</span><span>FastAPI</span><span>SQLModel</span><span>React</span><span>Zustand</span><span>Pytest</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/notes-app" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/notes-app
-              </a>
-            </div>
-          </div>
-
-          <div class="repo-card" data-cat="backend auth">
-            <div class="repo-header">
-              <div class="repo-name">auth-flow</div>
-              <span class="repo-category cat-backend">LEARNING</span>
-            </div>
-            <p class="repo-desc">Complete auth & session management from scratch. JWT cookies, bcrypt hashing, protected routes, cookie-based logout. Express 5 + EJS.</p>
-            <div class="repo-stack">
-              <span>Node.js</span><span>Express</span><span>JWT</span><span>bcrypt</span><span>EJS</span><span>db-local</span>
-            </div>
-            <div class="repo-link-row">
-              <a href="https://github.com/nachosag/auth-flow" target="_blank">
-                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                github.com/nachosag/auth-flow
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- TECH STACK -->
-    <section id="stack">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">ARSENAL</div>
-          <h2 class="section-title">TECH <span>STACK</span></h2>
-        </div>
-        <div class="stack-groups">
-          <div class="stack-group">
-            <div class="stack-group-title">// LANGUAGES</div>
-            <div class="tech-tags">
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Go</span>
-              <span class="tech-tag">SQL</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-group-title">// BACKEND</div>
-            <div class="tech-tags">
-              <span class="tech-tag magenta">FastAPI</span>
-              <span class="tech-tag magenta">Express</span>
-              <span class="tech-tag magenta">Node.js</span>
-              <span class="tech-tag magenta">Cloudflare Workers</span>
-              <span class="tech-tag magenta">itty-router</span>
-              <span class="tech-tag magenta">SQLModel</span>
-              <span class="tech-tag magenta">SQLAlchemy</span>
-              <span class="tech-tag magenta">REST APIs</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-group-title">// FRONTEND</div>
-            <div class="tech-tags">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Vanilla JS/TS</span>
-              <span class="tech-tag">HTML/CSS</span>
-              <span class="tech-tag">Zustand</span>
-              <span class="tech-tag">Vite</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-group-title">// DATA</div>
-            <div class="tech-tags">
-              <span class="tech-tag yellow">PostgreSQL</span>
-              <span class="tech-tag yellow">SQLite</span>
-              <span class="tech-tag yellow">Redis</span>
-              <span class="tech-tag yellow">Cloudflare D1</span>
-              <span class="tech-tag yellow">Cloudflare R2</span>
-              <span class="tech-tag yellow">MongoDB</span>
-              <span class="tech-tag yellow">Cassandra</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-group-title">// TESTING</div>
-            <div class="tech-tags">
-              <span class="tech-tag">Pytest</span>
-              <span class="tech-tag">Vitest</span>
-              <span class="tech-tag">Playwright</span>
-            </div>
-          </div>
-          <div class="stack-group">
-            <div class="stack-group-title">// DEVOPS & TOOLS</div>
-            <div class="tech-tags">
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Docker Compose</span>
-              <span class="tech-tag">GitHub Actions</span>
-              <span class="tech-tag">Cloudflare Pages</span>
-              <span class="tech-tag">Wrangler</span>
-              <span class="tech-tag">Git</span>
-              <span class="tech-tag">Ollama</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WORKFLOW -->
-    <section id="workflow">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">GENTLE AI</div>
-          <h2 class="section-title">SPEC-DRIVEN <span>WORKFLOW</span></h2>
-        </div>
-        <div class="workflow-grid">
-          <div class="workflow-terminal">
-            <div class="terminal-bar">
-              <div class="terminal-dot"></div>
-              <div class="terminal-dot"></div>
-              <div class="terminal-dot"></div>
-              <span class="terminal-title">nachosag@dev:~$</span>
-            </div>
-            <div class="terminal-body">
-              <div><span class="t-prompt">$ </span><span class="t-cmd">gentle-ai --workflow</span></div>
-              <div class="t-comment"># Spec-Driven Development Pipeline</div>
-              <div>&nbsp;</div>
-              <div><span class="t-output">explore  →  propose  →  spec  →  design</span></div>
-              <div><span class="t-output">  ↓          ↓         ↓        ↓</span></div>
-              <div><span class="t-output">tasks  →  apply  →  verify  →  archive</span></div>
-              <div>&nbsp;</div>
-              <div class="t-comment"># Core Principles</div>
-              <div><span class="t-output">▸ Specs before code — always</span></div>
-              <div><span class="t-output">▸ Delegate execution, orchestrate intent</span></div>
-              <div><span class="t-output">▸ Fresh context for reviews, continuity for build</span></div>
-              <div><span class="t-output">▸ Strict TDD when the stack supports it</span></div>
-              <div><span class="t-output">▸ Work-unit commits, chained PRs by default</span></div>
-              <div>&nbsp;</div>
-              <div class="t-comment"># Orchestration Model</div>
-              <div><span class="t-output">Planner (this agent)  ──delegates──►  Phase agents</span></div>
-              <div><span class="t-output">  │                                        │</span></div>
-              <div><span class="t-output">  └─ gates: dependency graph, workload guard,</span></div>
-              <div><span class="t-output">       review budget, incident recovery      │</span></div>
-              <div>&nbsp;</div>
-              <div><span class="t-prompt">$ </span><span class="t-cmd">_</span><span class="t-cursor"></span></div>
-            </div>
-          </div>
-
-          <div class="workflow-pillars">
-            <div class="pillar">
-              <div class="pillar-icon">◈</div>
-              <div class="pillar-content">
-                <h4>SPEC-FIRST DISCIPLINE</h4>
-                <p>Every change starts with a proposal, then spec, then design. No code until the contract is clear —
-                  this prevents rework and scope creep.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">⊞</div>
-              <div class="pillar-content">
-                <h4>ORCHESTRATION OVER EXECUTION</h4>
-                <p>The AI plans and delegates; sub-agents execute in fresh contexts. Gates between phases catch drift
-                  before it compounds downstream.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">⊿</div>
-              <div class="pillar-content">
-                <h4>ADVERSARIAL VERIFICATION</h4>
-                <p>Judgment Day protocol: blind dual review, fix confirmed issues, re-judge. No rubber-stamp approvals.</span
-                  — real stress testing of the implementation.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">◉</div>
-              <div class="pillar-content">
-                <h4>WORK-UNIT COMMITS</h4>
-                <p>Each commit is a reviewable unit: code + tests + docs together. Chained PRs keep diffs focused and
-                  reviewers unburdened.</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon">⬡</div>
-              <div class="pillar-content">
-                <h4>INCIDENT RECOVERY BUILT-IN</h4>
-                <p>Wrong cwd, merge conflicts, test failures — mandatory fresh-context audit before continuing. No
-                  silent workarounds that hide root causes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-inner">
-          <div class="section-tag">ESTABLISH CONNECTION</div>
-          <h2 class="section-title" style="margin-bottom:1.5rem;">GET IN <span>TOUCH</span></h2>
-          <p class="contact-desc">
-            Open to remote backend engineering roles. Let's talk about systems, architecture, or interesting problems
-            worth solving.
-          </p>
-          <div class="contact-links">
-            <a href="https://github.com/nachosag" target="_blank" class="contact-link">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              GITHUB
-            </a>
-            <a href="mailto:borlenghi.work@gmail.com" class="contact-link">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              EMAIL
-            </a>
-            <a href="https://www.linkedin.com/in/ignacio-borlenghi-74b720221/" target="_blank" class="contact-link">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-              LINKEDIN
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-brand">NACHOSAG.DEV // SOFTWARE ENGINEER</div>
-      <div class="footer-copy">BUENOS AIRES, AR // REMOTE AVAILABLE</div>
-    </footer>
-  </main>
-  <script>
-    function filterProjects(cat) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
-
-      document.querySelectorAll('.repo-card').forEach(card => {
-        const cardCat = card.dataset.cat || '';
-        if (cat === 'all' || cardCat.includes(cat)) {
-          card.removeAttribute('data-hidden');
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Orbitron:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#e9feff",
+                      "on-background": "#e5e1e7",
+                      "on-secondary-fixed": "#410008",
+                      "on-tertiary-fixed-variant": "#504700",
+                      "secondary-container": "#ff525c",
+                      "surface-container": "#1f1f23",
+                      "tertiary": "#fff9ee",
+                      "inverse-surface": "#e5e1e7",
+                      "on-error": "#690005",
+                      "terminal-green": "#00ff41",
+                      "on-secondary": "#680012",
+                      "secondary": "#ffb3b2",
+                      "surface-dim": "#131317",
+                      "error": "#ffb4ab",
+                      "ambient-purple": "#7b2ff7",
+                      "on-tertiary-container": "#6d6200",
+                      "on-surface-variant": "#b9caca",
+                      "surface-container-lowest": "#0e0e12",
+                      "on-primary": "#003739",
+                      "surface-tint": "#00dce5",
+                      "surface-variant": "#353439",
+                      "surface-bright": "#39393d",
+                      "surface-container-highest": "#353439",
+                      "on-error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#ffb3b2",
+                      "primary-container": "#00f5ff",
+                      "surface-container-high": "#2a292e",
+                      "on-tertiary-fixed": "#201c00",
+                      "outline": "#849495",
+                      "surface": "#131317",
+                      "on-primary-fixed": "#002021",
+                      "surface-bg": "#0d1120",
+                      "surface-container-low": "#1b1b1f",
+                      "outline-variant": "#3a494a",
+                      "tertiary-fixed": "#fde400",
+                      "inverse-primary": "#00696e",
+                      "on-primary-container": "#006c71",
+                      "on-tertiary": "#373100",
+                      "error-container": "#93000a",
+                      "on-primary-fixed-variant": "#004f53",
+                      "tertiary-container": "#f7df00",
+                      "tertiary-fixed-dim": "#dec800",
+                      "inverse-on-surface": "#303034",
+                      "on-surface": "#e5e1e7",
+                      "secondary-fixed": "#ffdad8",
+                      "grid-line": "rgba(0, 245, 255, 0.03)",
+                      "on-secondary-fixed-variant": "#92001e",
+                      "background": "#050508",
+                      "primary-fixed": "#63f7ff",
+                      "on-secondary-container": "#5b000f",
+                      "primary-fixed-dim": "#00dce5",
+                      "accent-cyan": "#00f5ff",
+                      "accent-magenta": "#ff003c",
+                      "accent-yellow": "#ffe600"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "grid-size": "60px",
+                      "margin-desktop": "80px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "code-mono": ["Share Tech Mono"],
+                      "headline-h1": ["Orbitron"],
+                      "body-md": ["Inter"],
+                      "headline-h1-mobile": ["Orbitron"],
+                      "label-caps": ["Share Tech Mono"],
+                      "display-lg": ["Orbitron"]
+              },
+              "fontSize": {
+                      "code-mono": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-h1-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.1em", "fontWeight": "700"}]
+              }
+            },
+          },
         }
-      });
+    </script>
+<style>
+        body {
+            background-color: #050508;
+            background-image: 
+                linear-gradient(to right, rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .scanlines-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%, 
+                rgba(0, 0, 0, 0.1) 50%
+            ), linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.005), rgba(0, 0, 255, 0.01));
+            background-size: 100% 4px, 3px 100%;
+            z-index: 10000;
+            pointer-events: none;
+            opacity: 0.2;
+            animation: scanline-move 10s linear infinite;
+        }
+
+        @keyframes scanline-move {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100%; }
+        }
+
+        .glow-cyan { filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.6)); }
+        .glow-magenta { filter: drop-shadow(0 0 8px rgba(255, 0, 60, 0.6)); }
+        
+        .clipped-corner {
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+
+        .cursor-blink {
+            animation: blink 1s infinite step-end;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .terminal-header {
+            background: linear-gradient(90deg, #1b1b1f 0%, #0e0e12 100%);
+        }
+
+        .ambient-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(123, 47, 247, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 30px -10px rgba(0, 245, 255, 0.3);
+            border-color: rgba(0, 245, 255, 0.5) !important;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(0, 245, 255, 0.2); box-shadow: 0 0 5px rgba(0, 245, 255, 0.1); }
+            50% { border-color: rgba(0, 245, 255, 0.5); box-shadow: 0 0 15px rgba(0, 245, 255, 0.2); }
+        }
+        .terminal-pulse {
+            animation: pulse-border 4s infinite ease-in-out;
+        }
+
+        @keyframes flicker-glow {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.9; }
+            20%, 22%, 24%, 55% { opacity: 0.4; }
+        }
+        .flicker-overlay {
+            animation: flicker-glow 8s infinite alternate;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .hover-lift, .scanlines-overlay, .terminal-pulse, .flicker-overlay, .cursor-blink {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background bg-background relative">
+<div class="scanlines-overlay"></div>
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-accent-cyan/20 h-20 transition-all duration-300 shadow-[0_0_15px_rgba(0,245,255,0.1)]">
+<div class="flex items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-screen-2xl mx-auto justify-center">
+<div class="hidden md:flex items-center gap-8 font-code-mono text-code-mono">
+<a class="transition-all text-on-surface-variant hover:text-accent-cyan transition-colors" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#stack">Stack</a>
+<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#workflow">Workflow</a>
+<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#contact">Contact</a>
+</div>
+<button class="md:hidden text-accent-cyan">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="relative pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden" id="home">
+<div class="ambient-glow -top-20 -left-20"></div>
+<div class="ambient-glow bottom-0 right-0" style="background: radial-gradient(circle, rgba(0, 245, 255, 0.05) 0%, transparent 70%);"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+<!-- Left Content -->
+<div class="reveal active">
+<h1 class="font-headline-h1 text-[48px] md:text-[80px] leading-tight tracking-tighter mb-4 uppercase typewriter" data-text="NACHOSAG" data-typed="true">NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span></h1>
+<h2 class="font-code-mono text-xl md:text-2xl text-accent-magenta mb-8 uppercase tracking-widest">// SOFTWARE ENGINEER</h2>
+<p class="text-on-surface-variant max-w-xl text-lg mb-12 leading-relaxed font-code-mono">
+                    Building backend systems, relational databases, and algorithmic solutions across multiple languages. Focused on correctness, maintainability, and understanding problems before implementing solutions. Architecture-driven, test-backed, production-minded.
+                </p>
+<div class="flex flex-wrap gap-6">
+<a href="#contact" class="inline-block bg-accent-cyan text-background px-8 py-4 font-code-mono font-bold uppercase clipped-corner hover:brightness-110 hover:scale-105 active:scale-95 transition-all glow-cyan shadow-[0_0_20px_rgba(0,245,255,0.3)]">
+                        Establish Connection
+                    </a>
+<a href="https://github.com/nachosag" target="_blank" class="inline-block border border-accent-cyan/30 text-accent-cyan px-8 py-4 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all">
+                        View Repositories
+                    </a>
+</div>
+</div>
+<!-- Right Terminal -->
+<div class="reveal delay-[300ms] active">
+<div class="bg-surface-container-lowest border border-accent-cyan/20 rounded-lg overflow-hidden shadow-2xl relative terminal-pulse">
+<div class="terminal-header h-10 px-4 flex items-center justify-between border-b border-accent-cyan/10">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-accent-yellow"></div>
+<div class="w-3 h-3 rounded-full bg-terminal-green"></div>
+</div>
+<span class="font-code-mono text-xs opacity-50 uppercase tracking-widest">system_status.sh</span>
+</div>
+<div class="p-8 font-code-mono text-sm md:text-base leading-relaxed text-terminal-green/90 flicker-overlay">
+<div class="flex items-center gap-4 mb-4">
+<span class="text-accent-cyan">os:</span>
+<span class="">Ubuntu 24.04 LTS</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-accent-cyan">shell:</span>
+<span class="">bash</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-accent-cyan">languages:</span>
+<span class="text-accent-magenta">[ "TypeScript", "Python", "Go" ]</span>
+</div>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-accent-cyan">location:</span>
+<span class="">Buenos Aires, AR</span>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="text-accent-cyan">$</span>
+<span class="">fetch --profile developer_identity</span>
+</div>
+<div class="mt-2 flex gap-2">
+<span class="text-accent-cyan">&gt;</span>
+<span class="">READY_TO_INITIALIZE...</span>
+</div>
+<div class="mt-2 flex items-center">
+<span class="text-accent-cyan">&gt;</span>
+<span class="ml-2 w-2 h-5 bg-accent-cyan cursor-blink"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto" id="about">
+<div class="reveal flex flex-col mb-16 active">
+<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// ABOUT</span>
+<h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">CORE_MINDSET</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div class="space-y-8 reveal delay-[100ms] active">
+<p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-cyan/20 pl-8 font-code-mono">
+                        I believe in understanding what happens under the hood — not just wiring libraries together. Software architecture, data modeling, and clean design patterns come before code. If you don't understand <em>why</em>, the implementation doesn't matter.
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-magenta/20 pl-8 font-code-mono">
+                        System design, distributed databases, graph algorithms, and the mechanics of making things fast, reliable, and maintainable. From REST APIs to NP-Hard optimization — my work lives at the intersection of clean architecture and pragmatic engineering.
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-yellow/20 pl-8 font-code-mono">
+                        I bring architectural clarity to teams that need it. Whether it's enforcing layered separation of concerns, designing dependency injection that enables true test isolation, or shipping serverless platforms at zero operational cost — my contributions reduce complexity and increase velocity.
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-[200ms] active">
+<div class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift border border-transparent">
+<span class="font-code-mono text-xs text-accent-cyan mb-2 block">// SYST_ARCH</span>
+<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">SCALABLE_CORE</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Modular layered systems using controllers → services → repositories patterns. Clean, Hexagonal, and Screaming Architecture. Serverless edge computing and distributed system design.</p>
+</div>
+<div class="bg-surface-container-low p-6 border-l-4 border-accent-magenta hover-lift border border-transparent">
+<span class="font-code-mono text-xs text-accent-magenta mb-2 block">// PERF_OPT</span>
+<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">LATENCY_CONTROL</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">End-to-end async I/O from HTTP to database layer. Optimized graph algorithms with ~40% reduction in execution time through tree pruning. Low-level systems understanding — pipelining, memory management, SIMD.</p>
+</div>
+<div class="bg-surface-container-low p-6 border-l-4 border-accent-yellow hover-lift border border-transparent">
+<span class="font-code-mono text-xs text-accent-yellow mb-2 block">// CODE_QUAL</span>
+<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">ROBUST_LOGIC</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Full test coverage across every layer — unit, integration, and stress testing. Dependency override for isolated database tests. Vitest, Pytest, JUnit. Mock injection and sandboxed edge runtime environments.</p>
+</div>
+<div class="bg-surface-container-low p-6 border-l-4 border-primary hover-lift border border-transparent">
+<span class="font-code-mono text-xs text-primary mb-2 block">// MENTOR_X</span>
+<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">TECH_LEADERSHIP</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Technical mentorship guiding team members on Python, FastAPI, and backend ecosystem fundamentals. Documented patterns and architecture decisions to raise team velocity across the board.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-32 bg-surface-container-lowest relative overflow-hidden" id="projects">
+<div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<div class="reveal flex flex-col mb-16 active">
+<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// DEPLOYED_ASSETS</span>
+<h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">PROJECT_PORTFOLIO</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- SIGRH+ -->
+<div class="reveal group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_001</span>
+<span class="material-symbols-outlined text-accent-cyan text-sm">terminal</span>
+</div>
+<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">SIGRH+</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Python</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">FastAPI</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">PostgreSQL</span>
+</div>
+<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
+<p class="text-xs text-on-surface-variant leading-snug">ERP/CRM for HR with integrated AI. NLP-based CV filtering reducing manual screening from hours to seconds per batch. Facial recognition attendance tracking. LLM chatbot via Ollama — fully offline, zero external API dependency.</p>
+</div>
+<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all" href="https://github.com/nachosag/sigrh" target="_blank">
+                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CDM Calculator -->
+<div class="reveal delay-[100ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_002</span>
+<span class="material-symbols-outlined text-accent-cyan text-sm">memory</span>
+</div>
+<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">CDM CALCULATOR</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Java</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Backtracking</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Graph Theory</span>
+</div>
+<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
+<p class="text-xs text-on-surface-variant leading-snug">NP-Hard Minimum Dominating Set solver. Aggressive recursion-tree pruning to process dense graph instances that previously caused memory overflow. ~40% execution time improvement, interactive graph editor in Java AWT.</p>
+</div>
+<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all" href="https://github.com/nachosag/cdm-calculator" target="_blank">
+                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- NotebookLM Gallery -->
+<div class="reveal delay-[200ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_003</span>
+<span class="material-symbols-outlined text-accent-cyan text-sm">cloud</span>
+</div>
+<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">NOTEBOOKLM GALLERY</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Cloudflare Workers</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">D1</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">R2</span>
+</div>
+<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
+<p class="text-xs text-on-surface-variant leading-snug">Fully serverless community platform on Cloudflare's free tier. Turnstile spam protection, IP-based rate limiting, FTS5 search, and &lt;150ms global page loads. Zero fixed infrastructure cost. 100% test coverage on critical API endpoints.</p>
+</div>
+<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all" href="https://github.com/nachosag/notebooklm-gallery" target="_blank">
+                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- MakerDAO Job Monitor -->
+<div class="reveal delay-[300ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_004</span>
+<span class="material-symbols-outlined text-accent-cyan text-sm">database</span>
+</div>
+<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">MAKERDAO MONITOR</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">TypeScript</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">ethers.js</span>
+<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Node.js</span>
+</div>
+<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
+<p class="text-xs text-on-surface-variant leading-snug">On-chain Ethereum monitoring for MakerDAO Sequencer contract. Direct ABI interaction via ethers.js, polling loop scanning 5,000+ blocks on startup. Multi-channel alerting (Discord, Slack) behind a shared interface. Full dependency injection across every layer.</p>
+</div>
+<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all" href="https://github.com/nachosag/wonderland-challenge" target="_blank">
+                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Explorer -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8 active">
+<div>
+<span class="font-code-mono text-accent-cyan tracking-widest mb-2 uppercase">// REPOSITORY_INDEX</span>
+<h2 class="font-headline-h1 text-3xl text-primary uppercase">PROJECT EXPLORER</h2>
+</div>
+<div class="flex flex-wrap gap-4 font-code-mono text-[10px] uppercase">
+<button class="px-4 py-2 bg-accent-cyan text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active" onclick="filterProjects('all')">ALL</button>
+<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('backend')">BACKEND</button>
+<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('algorithms')">ALGORITHMS</button>
+<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('serverless')">CLOUD</button>
+<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('fullstack')">UI/UX</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="explorer-grid">
+<!-- sigrh -->
+<div class="reveal bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/sigrh" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">sigrh</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+</div>
+<!-- cdm-calculator -->
+<div class="reveal delay-[50ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="algorithms">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/cdm-calculator" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">cdm-calculator</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
+</div>
+<!-- human-clustering -->
+<div class="reveal delay-[100ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="algorithms">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/human-clustering" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">human-clustering</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
+</div>
+<!-- lights-out-game -->
+<div class="reveal delay-[150ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/lights-out-game" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">lights-out-game</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">games</span>
+</div>
+<!-- wonderland-challenge -->
+<div class="reveal delay-[200ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/wonderland-challenge" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">wonderland-challenge</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+</div>
+<!-- siu-guarani-clone -->
+<div class="reveal delay-[250ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/siu-guarani-clone" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">siu-guarani-clone</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">academic</span>
+</div>
+<!-- notebooklm-gallery -->
+<div class="reveal delay-[300ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="serverless">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/notebooklm-gallery" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">notebooklm-gallery</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">serverless</span>
+</div>
+<!-- async-api -->
+<div class="reveal delay-[350ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/async-api" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">async-api</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+</div>
+<!-- github-activity-cli -->
+<div class="reveal delay-[400ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="fullstack">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/github-activity-cli" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">github-activity-cli</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">cli</span>
+</div>
+<!-- notes-app -->
+<div class="reveal delay-[450ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="fullstack">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/notes-app" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">notes-app</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">fullstack</span>
+</div>
+<!-- auth-flow -->
+<div class="reveal delay-[500ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
+<a href="https://github.com/nachosag/auth-flow" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">auth-flow</a>
+</div>
+<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+</div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="py-32 bg-background relative border-y border-accent-cyan/5" id="stack">
+<div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+<div class="reveal flex flex-col mb-16 text-center active">
+<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// CAPABILITY_MATRIX</span>
+<h2 class="font-headline-h1 text-4xl text-primary uppercase">TECH_STACK</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12">
+<div class="reveal hover-lift p-2 border border-transparent rounded transition-all active">
+<h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">LANGUAGES</h4>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">TypeScript</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Python</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Java</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Go</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">JavaScript</span>
+</div>
+</div>
+<div class="reveal delay-[100ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">FRONTEND</h4>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">React</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Angular</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Zustand</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Vite</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Vanilla CSS</span>
+</div>
+</div>
+<div class="reveal delay-[200ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">BACKEND</h4>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">FastAPI</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Express</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Nest</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">SQLModel</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">SQLAlchemy</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare Workers</span>
+</div>
+</div>
+<div class="reveal delay-[300ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">INFRA</h4>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Docker</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Docker Compose</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare Pages</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Wrangler CLI</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">GitHub Actions</span>
+</div>
+</div>
+<div class="reveal delay-[400ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">DATA</h4>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">PostgreSQL</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">MySQL</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">SQLite</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">MongoDB</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cassandra</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Redis</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare D1 / R2</span>
+</div>
+</div>
+<div class="reveal delay-[500ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">PIPELINE</h4>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Git</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">GitHub Actions</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Pytest</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Vitest</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">Playwright</span>
+<span class="text-sm font-code-mono text-on-surface-variant uppercase">oxlint</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden" id="workflow">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Terminal Pipeline Diagram -->
+<div class="reveal active">
+<div class="bg-surface-container-lowest border border-accent-magenta/20 rounded-lg overflow-hidden shadow-2xl terminal-pulse">
+<div class="terminal-header h-10 px-4 flex items-center justify-between border-b border-accent-magenta/10">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
+<div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
+<div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
+</div>
+<span class="font-code-mono text-xs opacity-50 uppercase tracking-widest">pipeline_schema.ascii</span>
+</div>
+<div class="p-8 font-code-mono text-sm leading-relaxed text-accent-magenta/90 overflow-x-auto whitespace-pre flicker-overlay">
+EXPLORE ────┐
+                  │
+   ┌──────────────┴──────────────┐
+   │      PROPOSE & SPEC         │
+   └──────────────┬──────────────┘
+                  │
+ TASKS ───────────┼── VERIFIED_DESIGN
+                  │
+   ┌──────────────┴──────────────┐
+   │    SPEC-DRIVEN DEV           │
+   └──────────────┬──────────────┘
+                  │
+ APPLY ───────────┼── REVIEW_GATE
+                  │
+   ┌──────────────┴──────────────┐
+   │    VERIFY & ARCHIVE          │
+   └─────────────────────────────┘
+                    </div>
+</div>
+</div>
+<!-- Pillar Cards -->
+<div class="reveal delay-[200ms] active">
+<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// DEVELOPMENT_METHODOLOGY</span>
+<h2 class="font-headline-h1 text-4xl text-primary mb-12 uppercase">ENGINEERING_LIFECYCLE</h2>
+<div class="space-y-6">
+<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
+<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">01. REQUIREMENT_ANALYSIS</h4>
+<p class="text-sm text-on-surface-variant">Breaking down stakeholder needs into clear, testable contracts. Spec-driven development ensures every feature has defined success criteria before a single line of code is written.</p>
+</div>
+<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
+<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">02. ARCHITECTURAL_BLUEPRINT</h4>
+<p class="text-sm text-on-surface-variant">Designing modular systems with clean separation of concerns — controllers, services, repositories. Dependency injection enables true test isolation and future flexibility without rewiring.</p>
+</div>
+<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
+<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">03. ITERATIVE_DEVELOPMENT</h4>
+<p class="text-sm text-on-surface-variant">Spec-driven development pipeline: explore → propose → spec → design → tasks → apply → verify → archive. Each phase gates quality and catches drift before it compounds downstream.</p>
+</div>
+<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
+<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">04. QUALITY_ASSURANCE</h4>
+<p class="text-sm text-on-surface-variant">Red-green-refactor TDD cycle when the stack supports it. Fresh-context reviews catching drift. Judgment Day adversarial verification — blind dual review, fix, re-judge. No rubber-stamp approvals.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto text-center border-t border-accent-cyan/5" id="contact">
+<div class="reveal max-w-2xl mx-auto active">
+<span class="font-code-mono text-accent-magenta tracking-widest mb-4 uppercase block">// TRANSMISSION_READY</span>
+<h2 class="font-headline-h1 text-5xl md:text-6xl text-primary mb-12 uppercase glow-magenta flicker-overlay">ESTABLISH CONNECTION</h2>
+<p class="text-on-surface-variant mb-16 text-lg font-code-mono">
+                Open to remote backend engineering roles and interesting technical challenges. Let's talk about systems, architecture, or problems worth solving.
+            </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<a class="w-full md:w-auto bg-accent-cyan text-background px-10 py-5 font-code-mono font-bold uppercase clipped-corner glow-cyan hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(0,245,255,0.2)] hover:shadow-[0_0_40px_rgba(0,245,255,0.4)]" href="mailto:borlenghi.work@gmail.com">
+                    BORLENGHI.WORK@GMAIL.COM
+                </a>
+<a class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3" href="https://github.com/nachosag" target="_blank">
+<span class="material-symbols-outlined">link</span> GITHUB
+                </a>
+<a class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3" href="https://linkedin.com/in/ignacio-borlenghi-74b720221" target="_blank">
+<span class="material-symbols-outlined">badge</span> LINKEDIN
+                </a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-dim border-t border-accent-cyan/10 py-12 w-full font-code-mono text-code-mono">
+<div class="flex flex-col md:flex-row items-center px-margin-mobile md:px-margin-desktop w-full max-w-screen-2xl mx-auto gap-8 opacity-80 hover:opacity-100 transition-opacity justify-center">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex flex-col items-center md:items-end">
+<span class="text-accent-magenta text-[10px] tracking-[0.2em] mb-1">STATION_LOCALE</span>
+<div class="flex gap-4">
+<span class="text-on-surface-variant uppercase">34.6037° S</span>
+<span class="text-on-surface-variant uppercase">58.3816° W</span>
+</div>
+</div>
+<div class="w-12 h-12 flex items-center justify-center border border-accent-cyan/20 text-accent-cyan hover:border-accent-cyan transition-colors">
+<a href="https://github.com/nachosag" target="_blank">
+<span class="material-symbols-outlined">qr_code_2</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                if(entry.target.querySelector('.typewriter')) {
+                    triggerTypewriter(entry.target.querySelector('.typewriter'));
+                }
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    function triggerTypewriter(element) {
+        if (element.dataset.typed === "true") return;
+        const text = element.dataset.text || element.innerText;
+        element.innerHTML = '';
+        element.dataset.typed = "true";
+        
+        let i = 0;
+        const speed = 100;
+        
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            } else {
+                if (text === "NACHOSAG") {
+                    element.innerHTML = 'NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span>';
+                }
+            }
+        }
+        type();
     }
 
-    // Subtle entrance animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+        let current = "";
+        const sections = document.querySelectorAll('section');
+        const scrollPosition = window.scrollY + 150;
+        
+        const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50;
+
+        if (isAtBottom) {
+            current = "contact";
+        } else {
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollPosition >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
         }
-      });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.project-card, .repo-card, .about-card, .pillar, .stack-group').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(16px)';
-      el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-      observer.observe(el);
+        navLinks.forEach(link => {
+            link.classList.remove('text-accent-cyan', 'border-b', 'border-accent-cyan', 'pb-1');
+            link.classList.add('text-on-surface-variant');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('text-accent-cyan', 'border-b', 'border-accent-cyan', 'pb-1');
+                link.classList.remove('text-on-surface-variant');
+            }
+        });
     });
-  </script>
-</body>
 
+    window.dispatchEvent(new Event('scroll'));
+
+    function filterProjects(cat) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-accent-cyan', 'text-background'));
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.add('border', 'border-accent-cyan/20', 'text-accent-cyan');
+            b.style.background = 'transparent';
+        });
+
+        const activeBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`) || document.querySelector('.filter-btn[onclick*="all"]');
+        if (activeBtn) {
+            activeBtn.classList.remove('border', 'border-accent-cyan/20');
+            activeBtn.classList.add('bg-accent-cyan', 'text-background', 'font-bold');
+        }
+
+        document.querySelectorAll('#explorer-grid > div').forEach(card => {
+            const cardCat = card.dataset.cat || '';
+            if (cat === 'all' || cardCat.includes(cat)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+</body>
 </html>
