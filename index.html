@@ -162,9 +162,9 @@
         @keyframes blink { 50% { opacity: 0; } }
 
         .reveal { 
-            opacity: 0; 
-            transform: translateY(30px); 
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
+            opacity: 0.85; 
+            transform: translateY(12px); 
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
         }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -303,12 +303,12 @@
 </section>
 <!-- About Section -->
 <section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto" id="about">
-<div class="reveal flex flex-col mb-16 active">
+<div class="reveal flex flex-col mb-16">
 <span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// ABOUT</span>
 <h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">CORE_MINDSET</h2>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-<div class="space-y-8 reveal delay-[100ms] active">
+<div class="space-y-8 reveal delay-[100ms]">
 <p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-cyan/20 pl-8 font-code-mono">
                         I believe in understanding what happens under the hood — not just wiring libraries together. Software architecture, data modeling, and clean design patterns come before code. If you don't understand <em>why</em>, the implementation doesn't matter.
                     </p>
@@ -319,7 +319,7 @@
                         I bring architectural clarity to teams that need it. Whether it's enforcing layered separation of concerns, designing dependency injection that enables true test isolation, or shipping serverless platforms at zero operational cost — my contributions reduce complexity and increase velocity.
                     </p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-[200ms] active">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-[200ms]">
 <div class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift border border-transparent">
 <span class="font-code-mono text-xs text-accent-cyan mb-2 block">// SYST_ARCH</span>
 <h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">SCALABLE_CORE</h4>
@@ -346,13 +346,13 @@
 <!-- Featured Projects -->
 <section class="py-32 bg-surface-container-lowest relative overflow-hidden" id="projects">
 <div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
-<div class="reveal flex flex-col mb-16 active">
+<div class="reveal flex flex-col mb-16">
 <span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// DEPLOYED_ASSETS</span>
 <h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">PROJECT_PORTFOLIO</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <!-- SIGRH+ -->
-<div class="reveal group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="reveal group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift">
 <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="p-6">
@@ -376,7 +376,7 @@
 </div>
 </div>
 <!-- CDM Calculator -->
-<div class="reveal delay-[100ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="reveal delay-[100ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift">
 <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="p-6">
@@ -400,7 +400,7 @@
 </div>
 </div>
 <!-- NotebookLM Gallery -->
-<div class="reveal delay-[200ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="reveal delay-[200ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift">
 <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="p-6">
@@ -424,7 +424,7 @@
 </div>
 </div>
 <!-- MakerDAO Job Monitor -->
-<div class="reveal delay-[300ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift active">
+<div class="reveal delay-[300ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift">
 <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="p-6">
@@ -452,7 +452,7 @@
 </section>
 <!-- Project Explorer -->
 <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
-<div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8 active">
+<div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
 <div>
 <span class="font-code-mono text-accent-cyan tracking-widest mb-2 uppercase">// REPOSITORY_INDEX</span>
 <h2 class="font-headline-h1 text-3xl text-primary uppercase">PROJECT EXPLORER</h2>
@@ -467,7 +467,7 @@
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="explorer-grid">
 <!-- sigrh -->
-<div class="reveal bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="reveal bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/sigrh" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">sigrh</a>
@@ -475,7 +475,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
 </div>
 <!-- cdm-calculator -->
-<div class="reveal delay-[50ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="algorithms">
+<div class="reveal delay-[50ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="algorithms">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/cdm-calculator" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">cdm-calculator</a>
@@ -483,7 +483,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
 </div>
 <!-- human-clustering -->
-<div class="reveal delay-[100ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="algorithms">
+<div class="reveal delay-[100ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="algorithms">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/human-clustering" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">human-clustering</a>
@@ -491,7 +491,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
 </div>
 <!-- lights-out-game -->
-<div class="reveal delay-[150ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="reveal delay-[150ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/lights-out-game" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">lights-out-game</a>
@@ -499,7 +499,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">games</span>
 </div>
 <!-- wonderland-challenge -->
-<div class="reveal delay-[200ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="reveal delay-[200ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/wonderland-challenge" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">wonderland-challenge</a>
@@ -507,7 +507,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
 </div>
 <!-- siu-guarani-clone -->
-<div class="reveal delay-[250ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="reveal delay-[250ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/siu-guarani-clone" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">siu-guarani-clone</a>
@@ -515,7 +515,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">academic</span>
 </div>
 <!-- notebooklm-gallery -->
-<div class="reveal delay-[300ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="serverless">
+<div class="reveal delay-[300ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="serverless">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/notebooklm-gallery" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">notebooklm-gallery</a>
@@ -523,7 +523,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">serverless</span>
 </div>
 <!-- async-api -->
-<div class="reveal delay-[350ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="reveal delay-[350ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/async-api" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">async-api</a>
@@ -531,7 +531,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
 </div>
 <!-- github-activity-cli -->
-<div class="reveal delay-[400ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="fullstack">
+<div class="reveal delay-[400ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="fullstack">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/github-activity-cli" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">github-activity-cli</a>
@@ -539,7 +539,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">cli</span>
 </div>
 <!-- notes-app -->
-<div class="reveal delay-[450ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="fullstack">
+<div class="reveal delay-[450ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="fullstack">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/notes-app" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">notes-app</a>
@@ -547,7 +547,7 @@
 <span class="text-[10px] font-code-mono text-accent-yellow">fullstack</span>
 </div>
 <!-- auth-flow -->
-<div class="reveal delay-[500ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift active" data-cat="backend">
+<div class="reveal delay-[500ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
 <a href="https://github.com/nachosag/auth-flow" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">auth-flow</a>
@@ -559,12 +559,12 @@
 <!-- Tech Stack -->
 <section class="py-32 bg-background relative border-y border-accent-cyan/5" id="stack">
 <div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
-<div class="reveal flex flex-col mb-16 text-center active">
+<div class="reveal flex flex-col mb-16 text-center">
 <span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// CAPABILITY_MATRIX</span>
 <h2 class="font-headline-h1 text-4xl text-primary uppercase">TECH_STACK</h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12">
-<div class="reveal hover-lift p-2 border border-transparent rounded transition-all active">
+<div class="reveal hover-lift p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">LANGUAGES</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">TypeScript</span>
@@ -574,7 +574,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">JavaScript</span>
 </div>
 </div>
-<div class="reveal delay-[100ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<div class="reveal delay-[100ms] hover-lift p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">FRONTEND</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">React</span>
@@ -584,7 +584,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Vanilla CSS</span>
 </div>
 </div>
-<div class="reveal delay-[200ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<div class="reveal delay-[200ms] hover-lift p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">BACKEND</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">FastAPI</span>
@@ -595,7 +595,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare Workers</span>
 </div>
 </div>
-<div class="reveal delay-[300ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<div class="reveal delay-[300ms] hover-lift p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">INFRA</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Docker</span>
@@ -605,7 +605,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">GitHub Actions</span>
 </div>
 </div>
-<div class="reveal delay-[400ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<div class="reveal delay-[400ms] hover-lift p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">DATA</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">PostgreSQL</span>
@@ -617,7 +617,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare D1 / R2</span>
 </div>
 </div>
-<div class="reveal delay-[500ms] hover-lift p-2 border border-transparent rounded transition-all active">
+<div class="reveal delay-[500ms] hover-lift p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">PIPELINE</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Git</span>
@@ -635,7 +635,7 @@
 <section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden" id="workflow">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <!-- Terminal Pipeline Diagram -->
-<div class="reveal active">
+<div class="reveal">
 <div class="bg-surface-container-lowest border border-accent-magenta/20 rounded-lg overflow-hidden shadow-2xl terminal-pulse">
 <div class="terminal-header h-10 px-4 flex items-center justify-between border-b border-accent-magenta/10">
 <div class="flex gap-2">
@@ -667,7 +667,7 @@ EXPLORE ────┐
 </div>
 </div>
 <!-- Pillar Cards -->
-<div class="reveal delay-[200ms] active">
+<div class="reveal delay-[200ms]">
 <span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// DEVELOPMENT_METHODOLOGY</span>
 <h2 class="font-headline-h1 text-4xl text-primary mb-12 uppercase">ENGINEERING_LIFECYCLE</h2>
 <div class="space-y-6">
@@ -693,7 +693,7 @@ EXPLORE ────┐
 </section>
 <!-- Contact Section -->
 <section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto text-center border-t border-accent-cyan/5" id="contact">
-<div class="reveal max-w-2xl mx-auto active">
+<div class="reveal max-w-2xl mx-auto">
 <span class="font-code-mono text-accent-magenta tracking-widest mb-4 uppercase block">// TRANSMISSION_READY</span>
 <h2 class="font-headline-h1 text-5xl md:text-6xl text-primary mb-12 uppercase glow-magenta flicker-overlay">ESTABLISH CONNECTION</h2>
 <p class="text-on-surface-variant mb-16 text-lg font-code-mono">
@@ -732,11 +732,23 @@ EXPLORE ────┐
 </div>
 </footer>
 <script>
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // Nav click: reveal target section immediately before smooth-scrolling
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    target.querySelectorAll('.reveal:not(.active)').forEach(el => {
+                        el.classList.add('active');
+                    });
+                }
+            }
+        });
+    });
 
+    // IntersectionObserver: add .active when sections scroll into view
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -746,7 +758,7 @@ EXPLORE ────┐
                 }
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
