@@ -13,8 +13,8 @@
   --purple: #7b2ff7;
   --purple-dim: #5a1fd6;
   --text-primary: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --text-dim: #475569;
+  --text-secondary: #b8c9dd;
+  --text-dim: #8899b0;
   --border: rgba(0, 245, 255, 0.12);
   --border-bright: rgba(0, 245, 255, 0.35);
   --font-mono: 'Share Tech Mono', monospace;
@@ -36,8 +36,8 @@ body {
   background: var(--black);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px; /* increased for better readability */
+  line-height: 1.8; /* increased line spacing */
   overflow-x: hidden;
 }
 
@@ -180,11 +180,11 @@ section {
   z-index: 1;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 
 /* HERO */
 #hero {
@@ -216,6 +216,18 @@ section {
   height: 400px;
   background: radial-gradient(circle, rgba(0, 245, 255, 0.08) 0%, transparent 70%);
   pointer-events: none;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.hero-neofetch {
+  position: sticky;
+  top: 8rem;
 }
 
 .hero-label {
@@ -268,10 +280,10 @@ section {
 .hero-desc {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  max-width: 520px;
+  max-width: 640px;
   line-height: 1.7;
   margin-bottom: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hero-desc strong {
@@ -427,13 +439,13 @@ section {
   align-items: start;
 }
 
-.about-text p {
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: 1.25rem;
-  font-weight: 300;
-}
+  .about-text p {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
 
 .about-text p strong {
   color: var(--cyan);
@@ -480,7 +492,7 @@ section {
 .about-card p {
   font-size: 0.9rem;
   color: var(--text-secondary);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* TECH STACK */
@@ -492,7 +504,7 @@ section {
 
 .stack-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
 }
 
@@ -582,7 +594,7 @@ section {
 
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
@@ -657,7 +669,7 @@ section {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   flex: 1;
 }
 
@@ -680,7 +692,7 @@ section {
 .project-challenge p {
   font-size: 0.82rem;
   color: var(--text-secondary);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .project-tech {
@@ -830,7 +842,7 @@ section {
   color: var(--text-dim);
   line-height: 1.5;
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .repo-stack {
@@ -869,20 +881,29 @@ section {
   color: var(--cyan);
 }
 
-/* PHILOSOPHY */
-#philosophy {
+/* PHILOSOPHY / WORKFLOW */
+#philosophy,
+#workflow {
   padding: 6rem 0;
   border-top: 1px solid var(--border);
 }
 
-.philosophy-grid {
+.philosophy-grid,
+.workflow-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: start;
 }
 
-.philosophy-terminal {
+.philosophy-terminal,
+.workflow-terminal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.terminal {
   background: var(--surface);
   border: 1px solid var(--border);
   overflow: hidden;
@@ -954,6 +975,21 @@ section {
   color: var(--yellow);
 }
 
+.t-key {
+  color: var(--text-dim);
+  margin-right: 1rem;
+  min-width: 5ch;
+  display: inline-block;
+}
+
+.t-val {
+  color: var(--text-secondary);
+}
+
+.t-val.highlight {
+  color: var(--cyan);
+}
+
 .t-cursor {
   display: inline-block;
   width: 8px;
@@ -976,7 +1012,8 @@ section {
   }
 }
 
-.philosophy-pillars {
+.philosophy-pillars,
+.workflow-pillars {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -1014,7 +1051,7 @@ section {
 .pillar-content p {
   font-size: 0.88rem;
   color: var(--text-dim);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -1064,7 +1101,7 @@ section {
   font-size: 1rem;
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -1189,9 +1226,19 @@ footer {
 @media (max-width: 768px) {
 
   .about-grid,
-  .philosophy-grid {
+  .philosophy-grid,
+  .workflow-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-neofetch {
+    position: static;
   }
 
   .hero-stats {
@@ -1204,5 +1251,9 @@ footer {
 
   .featured-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stack-groups {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
