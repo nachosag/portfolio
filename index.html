@@ -675,33 +675,67 @@
 </div>
 <span class="font-code-mono text-xs opacity-50 uppercase tracking-widest">pipeline_schema.ascii</span>
 </div>
-<div class="p-8 font-code-mono text-[11px] md:text-sm leading-relaxed overflow-x-auto whitespace-pre flicker-overlay">
-<span class="text-accent-cyan">┌──────────────────────────────────────────────┐</span>
-<span class="text-accent-cyan">│ </span><span class="text-accent-magenta font-bold">GENTLE-AI SDD PIPELINE</span><span class="text-accent-cyan">                       │</span>
-<span class="text-accent-cyan">└──────────────────────────────────────────────┘</span>
+<div class="p-8 flex flex-col gap-3 font-code-mono text-[11px] md:text-sm leading-relaxed flicker-overlay">
+<div class="flex items-center gap-3 px-2 py-2 rounded border border-accent-cyan/20 bg-accent-cyan/5">
+  <span class="text-accent-magenta font-bold uppercase tracking-widest">GENTLE-AI SDD PIPELINE</span>
+</div>
 
- <span class="text-accent-cyan">EXPLORE</span>        <span class="text-on-surface-variant/60">→  Investigate &amp; clarify</span>
-        <span class="text-accent-cyan">│</span>
-        <span class="text-accent-cyan">▼</span>
- <span class="text-accent-cyan">PROPOSE</span>        <span class="text-on-surface-variant/60">→  Proposal with intent/scope</span>
-        <span class="text-accent-cyan">│</span>
-        <span class="text-accent-cyan">▼</span>
- <span class="text-accent-yellow">SPEC</span>           <span class="text-on-surface-variant/60">→  Delta specs, scenarios</span>
-        <span class="text-accent-cyan">│</span>
-        <span class="text-accent-cyan">▼</span>
- <span class="text-accent-yellow">DESIGN</span>         <span class="text-on-surface-variant/60">→  Architecture, APIs, models</span>
-        <span class="text-accent-cyan">│</span>
-        <span class="text-accent-cyan">▼</span>
- <span class="text-accent-yellow">TASKS</span>          <span class="text-on-surface-variant/60">→  Reviewable work units</span>
-        <span class="text-accent-cyan">│</span>
-        <span class="text-accent-cyan">▼</span>
- <span class="text-accent-magenta">APPLY</span>          <span class="text-on-surface-variant/60">→  Implement, TDD, work-units</span>
-        <span class="text-accent-cyan">│</span>
-        <span class="text-accent-cyan">▼</span>
- <span class="text-accent-magenta">VERIFY</span>         <span class="text-on-surface-variant/60">→  Tests, spec compliance</span>
-        <span class="text-accent-cyan">│</span>
-        <span class="text-accent-cyan">▼</span>
- <span class="text-accent-magenta">ARCHIVE</span>        <span class="text-on-surface-variant/60">→  Sync specs, close change</span>
+<div class="flex items-start gap-3 px-2">
+  <span class="text-accent-cyan font-bold w-24 shrink-0">EXPLORE</span>
+  <span class="text-accent-cyan">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Investigate &amp; clarify requirements</span>
+</div>
+<div class="flex items-center gap-3 px-2">
+  <span class="text-accent-cyan">↓</span>
+  <span class="text-accent-cyan font-bold w-24 shrink-0">PROPOSE</span>
+  <span class="text-accent-cyan">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Create change proposal with intent &amp; scope</span>
+</div>
+<div class="flex items-center gap-3 px-2">
+  <span class="text-accent-cyan">↓</span>
+  <span class="text-accent-yellow font-bold w-24 shrink-0">SPEC</span>
+  <span class="text-accent-yellow">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Delta specs: requirements, scenarios, acceptance</span>
+</div>
+<div class="flex items-center gap-3 px-2">
+  <span class="text-accent-cyan">↓</span>
+  <span class="text-accent-yellow font-bold w-24 shrink-0">DESIGN</span>
+  <span class="text-accent-yellow">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Technical design, architecture, data models, APIs</span>
+</div>
+<div class="flex items-center gap-3 px-2">
+  <span class="text-accent-cyan">↓</span>
+  <span class="text-accent-yellow font-bold w-24 shrink-0">TASKS</span>
+  <span class="text-accent-yellow">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Break into reviewable implementation units</span>
+</div>
+<div class="flex items-center gap-3 px-2">
+  <span class="text-accent-cyan">↓</span>
+  <span class="text-accent-magenta font-bold w-24 shrink-0">APPLY</span>
+  <span class="text-accent-magenta">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Implement with work-unit commits, TDD when supported</span>
+</div>
+<div class="flex items-center gap-3 px-2">
+  <span class="text-accent-cyan">↓</span>
+  <span class="text-accent-magenta font-bold w-24 shrink-0">VERIFY</span>
+  <span class="text-accent-magenta">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Run tests, prove spec &amp; design compliance</span>
+</div>
+<div class="flex items-center gap-3 px-2">
+  <span class="text-accent-cyan">↓</span>
+  <span class="text-accent-magenta font-bold w-24 shrink-0">ARCHIVE</span>
+  <span class="text-accent-magenta">→</span>
+  <span class="text-on-surface-variant/60 flex-1">Sync delta specs, close change</span>
+</div>
+
+<div class="flex items-center gap-2 px-2 py-2 mt-4 rounded border border-accent-magenta/20 bg-accent-magenta/5">
+  <span class="text-accent-magenta font-bold">QUALITY GATES:</span>
+  <span class="text-accent-cyan">TDD</span>
+  <span class="text-on-surface-variant/60">·</span>
+  <span class="text-accent-cyan">Fresh Reviews</span>
+  <span class="text-on-surface-variant/60">·</span>
+  <span class="text-accent-cyan">Judgment Day</span>
+</div>
 </div>
 </div>
 </div>
