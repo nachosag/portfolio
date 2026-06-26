@@ -488,7 +488,7 @@
 <h2 class="font-headline-h1 text-3xl text-primary uppercase">PROJECT EXPLORER</h2>
 </div>
 <div class="flex flex-wrap gap-4 font-code-mono text-[10px] uppercase">
-<button class="px-4 py-2 bg-accent-cyan text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active" onclick="filterProjects('all')">ALL</button>
+<button class="px-4 py-2 bg-accent-magenta text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active" onclick="filterProjects('all')">ALL</button>
 <button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('backend')">BACKEND</button>
 <button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('algorithms')">ALGORITHMS</button>
 <button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('serverless')">CLOUD</button>
@@ -848,15 +848,17 @@ EXPLORE ────┐
 
     function filterProjects(cat) {
         document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.remove('bg-accent-cyan', 'text-background', 'font-bold');
+            btn.classList.remove(
+                'bg-accent-cyan', 'bg-accent-magenta', 'text-background', 'font-bold'
+            );
             btn.classList.add('border', 'border-accent-cyan/20', 'text-accent-cyan');
-            btn.style.background = 'transparent';
+            btn.style.background = '';
         });
 
         const activeBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
         if (activeBtn) {
-            activeBtn.classList.remove('border', 'border-accent-cyan/20');
-            activeBtn.classList.add('bg-accent-cyan', 'text-background', 'font-bold');
+            activeBtn.classList.remove('border', 'border-accent-cyan/20', 'text-accent-cyan');
+            activeBtn.classList.add('bg-accent-magenta', 'text-background', 'font-bold');
         }
 
         document.querySelectorAll('#explorer-grid > div').forEach(card => {
