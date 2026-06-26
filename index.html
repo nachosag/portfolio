@@ -857,8 +857,10 @@ EXPLORE ────┐
 
         const activeBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
         if (activeBtn) {
-            activeBtn.classList.remove('border', 'border-accent-cyan/20', 'text-accent-cyan');
-            activeBtn.classList.add('bg-accent-magenta', 'text-background', 'font-bold');
+            activeBtn.classList.remove(
+                'border', 'border-accent-cyan/20', 'text-accent-cyan', 'hover:bg-accent-cyan/10'
+            );
+            activeBtn.classList.add('bg-accent-magenta', 'text-background', 'font-bold', 'hover:brightness-110');
         }
 
         document.querySelectorAll('#explorer-grid > div').forEach(card => {
