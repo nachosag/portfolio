@@ -207,8 +207,18 @@
         }
         .hover-lift:hover {
             transform: translateY(-8px) scale(1.02);
+        }
+        .hover-cyan:hover {
             box-shadow: 0 10px 30px -10px rgba(0, 245, 255, 0.3);
             border-color: rgba(0, 245, 255, 0.5) !important;
+        }
+        .hover-magenta:hover {
+            box-shadow: 0 10px 30px -10px rgba(255, 0, 60, 0.3);
+            border-color: rgba(255, 0, 60, 0.5) !important;
+        }
+        .hover-yellow:hover {
+            box-shadow: 0 10px 30px -10px rgba(255, 230, 0, 0.3);
+            border-color: rgba(255, 230, 0, 0.5) !important;
         }
 
         @keyframes pulse-border {
@@ -340,22 +350,22 @@
                     </p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-[200ms]">
-<div class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift border border-transparent">
+<div class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift hover-cyan border border-transparent">
 <span class="font-code-mono text-xs text-accent-cyan mb-2 block">// SYST_ARCH</span>
 <h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">SCALABLE_CORE</h4>
 <p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">Modular layered systems</strong> using controllers → services → repositories patterns. <strong class="text-accent-cyan">Clean, Hexagonal, and Screaming Architecture</strong>. <strong class="text-accent-magenta">Serverless edge computing</strong> and <strong class="text-accent-cyan">distributed system design</strong>.</p>
 </div>
-<div class="bg-surface-container-low p-6 border-l-4 border-accent-magenta hover-lift border border-transparent">
+<div class="bg-surface-container-low p-6 border-l-4 border-accent-magenta hover-lift hover-magenta border border-transparent">
 <span class="font-code-mono text-xs text-accent-magenta mb-2 block">// PERF_OPT</span>
 <h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">LATENCY_CONTROL</h4>
 <p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">End-to-end async I/O</strong> from HTTP to database layer. <strong class="text-accent-magenta">Optimized graph algorithms</strong> with <strong class="text-accent-cyan">~40% reduction</strong> in execution time through tree pruning. <strong class="text-accent-cyan">Low-level systems</strong> understanding — pipelining, memory management, SIMD.</p>
 </div>
-<div class="bg-surface-container-low p-6 border-l-4 border-accent-yellow hover-lift border border-transparent">
+<div class="bg-surface-container-low p-6 border-l-4 border-accent-yellow hover-lift hover-yellow border border-transparent">
 <span class="font-code-mono text-xs text-accent-yellow mb-2 block">// CODE_QUAL</span>
 <h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">ROBUST_LOGIC</h4>
 <p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">Full test coverage</strong> across every layer — unit, integration, and stress testing. <strong class="text-accent-cyan">Dependency override</strong> for isolated database tests. <strong class="text-accent-cyan">Vitest</strong>, <strong class="text-accent-cyan">Pytest</strong>, <strong class="text-accent-cyan">JUnit</strong>. <strong class="text-accent-magenta">Mock injection</strong> and <strong class="text-accent-cyan">sandboxed edge runtime</strong> environments.</p>
 </div>
-<div class="bg-surface-container-low p-6 border-l-4 border-primary hover-lift border border-transparent">
+<div class="bg-surface-container-low p-6 border-l-4 border-primary hover-lift hover-cyan border border-transparent">
 <span class="font-code-mono text-xs text-primary mb-2 block">// MENTOR_X</span>
 <h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">TECH_LEADERSHIP</h4>
 <p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">Technical mentorship</strong> guiding team members on <strong class="text-accent-cyan">Python</strong>, <strong class="text-accent-cyan">FastAPI</strong>, and backend ecosystem fundamentals. Documented <strong class="text-accent-cyan">patterns</strong> and <strong class="text-accent-cyan">architecture decisions</strong> to raise <strong class="text-accent-magenta">team velocity</strong> across the board.</p>
@@ -584,7 +594,7 @@
 <h2 class="font-headline-h1 text-4xl text-primary uppercase">TECH_STACK</h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12">
-<div class="reveal hover-lift p-2 border border-transparent rounded transition-all">
+<div class="reveal hover-lift hover-cyan p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">LANGUAGES</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">TypeScript</span>
@@ -594,7 +604,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">JavaScript</span>
 </div>
 </div>
-<div class="reveal delay-[100ms] hover-lift p-2 border border-transparent rounded transition-all">
+<div class="reveal delay-[100ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">FRONTEND</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">React</span>
@@ -604,7 +614,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Vanilla CSS</span>
 </div>
 </div>
-<div class="reveal delay-[200ms] hover-lift p-2 border border-transparent rounded transition-all">
+<div class="reveal delay-[200ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">BACKEND</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">FastAPI</span>
@@ -615,7 +625,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare Workers</span>
 </div>
 </div>
-<div class="reveal delay-[300ms] hover-lift p-2 border border-transparent rounded transition-all">
+<div class="reveal delay-[300ms] hover-lift hover-cyan p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">INFRA</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Docker</span>
@@ -625,7 +635,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">GitHub Actions</span>
 </div>
 </div>
-<div class="reveal delay-[400ms] hover-lift p-2 border border-transparent rounded transition-all">
+<div class="reveal delay-[400ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">DATA</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">PostgreSQL</span>
@@ -637,7 +647,7 @@
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare D1 / R2</span>
 </div>
 </div>
-<div class="reveal delay-[500ms] hover-lift p-2 border border-transparent rounded transition-all">
+<div class="reveal delay-[500ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all">
 <h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">PIPELINE</h4>
 <div class="flex flex-col gap-4">
 <span class="text-sm font-code-mono text-on-surface-variant uppercase">Git</span>
