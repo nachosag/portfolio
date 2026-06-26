@@ -860,28 +860,42 @@
     }
 
     navLinks = document.querySelectorAll('nav a');
+    // Map section IDs to nav link IDs (multiple sections can map to same nav item)
+    const sectionToNav = {
+      'home': 'home',
+      'about': 'about',
+      'featured-projects': 'projects',
+      'projects': 'projects',
+      'stack': 'stack',
+      'workflow': 'workflow',
+      'contact': 'contact'
+    };
+
     window.addEventListener('scroll', () => {
-        let current = "";
+        let currentSection = "";
         const sections = document.querySelectorAll('section');
         const scrollPosition = window.scrollY + 150;
         
         const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50;
 
         if (isAtBottom) {
-            current = "contact";
+            currentSection = "contact";
         } else {
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (scrollPosition >= sectionTop) {
-                    current = section.getAttribute('id');
+                    currentSection = section.getAttribute('id');
                 }
             });
         }
 
+        // Resolve section ID to nav link ID
+        const currentNav = sectionToNav[currentSection] || currentSection;
+
         navLinks.forEach(link => {
             link.classList.remove('text-accent-cyan', 'border-b', 'border-accent-cyan', 'pb-1');
             link.classList.add('text-on-surface-variant');
-            if (link.getAttribute('href') === `#${current}`) {
+            if (link.getAttribute('href') === `#${currentNav}`) {
                 link.classList.add('text-accent-cyan', 'border-b', 'border-accent-cyan', 'pb-1');
                 link.classList.remove('text-on-surface-variant');
             }
