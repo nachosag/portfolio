@@ -847,25 +847,22 @@ EXPLORE ────┐
     window.dispatchEvent(new Event('scroll'));
 
     function filterProjects(cat) {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-accent-cyan', 'text-background'));
-        document.querySelectorAll('.filter-btn').forEach(b => {
-            b.classList.add('border', 'border-accent-cyan/20', 'text-accent-cyan');
-            b.style.background = 'transparent';
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('bg-accent-cyan', 'text-background', 'font-bold');
+            btn.classList.add('border', 'border-accent-cyan/20', 'text-accent-cyan');
+            btn.style.background = 'transparent';
         });
 
-        const activeBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`) || document.querySelector('.filter-btn[onclick*="all"]');
+        const activeBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
         if (activeBtn) {
             activeBtn.classList.remove('border', 'border-accent-cyan/20');
             activeBtn.classList.add('bg-accent-cyan', 'text-background', 'font-bold');
         }
 
         document.querySelectorAll('#explorer-grid > div').forEach(card => {
-            const cardCat = card.dataset.cat || '';
-            if (cat === 'all' || cardCat.includes(cat)) {
-                card.style.display = '';
-            } else {
-                card.style.display = 'none';
-            }
+            const match = cat === 'all' || (card.dataset.cat || '').includes(cat);
+            card.style.display = match ? '' : 'none';
+            if (match) card.classList.add('active');
         });
     }
 </script>
