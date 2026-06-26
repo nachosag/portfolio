@@ -763,7 +763,7 @@ EXPLORE ────┐
 </footer>
 <script>
     // Nav click: reveal target section immediately before smooth-scrolling
-    const navLinks = document.querySelectorAll('nav a');
+    let navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
@@ -815,7 +815,7 @@ EXPLORE ────┐
         type();
     }
 
-    const navLinks = document.querySelectorAll('nav a');
+    navLinks = document.querySelectorAll('nav a');
     window.addEventListener('scroll', () => {
         let current = "";
         const sections = document.querySelectorAll('section');
