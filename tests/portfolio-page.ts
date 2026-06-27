@@ -22,7 +22,7 @@ export class PortfolioPage {
   }
 
   async goto() {
-    await this.page.goto('file:///home/nachosag/dev/portfolio/index.html')
+    await this.page.goto('/')
     await this.page.waitForLoadState('domcontentloaded')
   }
 
