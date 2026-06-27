@@ -294,3 +294,10 @@ html {
     animation: none !important;
   }
 }
+
+/* Fix Tailwind v4 base reset warning: vertical-align is ignored on display: block */
+@layer base {
+  img, svg, video, canvas, audio, iframe, embed, object {
+    vertical-align: unset;
+  }
+}
