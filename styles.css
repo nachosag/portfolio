@@ -54,7 +54,7 @@
   --color-primary-fixed-dim: #00dce5;
   --color-accent-cyan: #00f5ff;
   --color-accent-magenta: #ff003c;
-  --color-accent-yellow: #ffe600;
+  --color-accent-yellow: #f7df00;
 
   --font-code-mono: "Share Tech Mono";
   --font-headline-h1: "Orbitron";
@@ -63,17 +63,18 @@
   --font-label-caps: "Share Tech Mono";
   --font-display-lg: "Orbitron";
 
-  --text-code-mono: 14px / 1.6;
+  --text-code-mono: 14px;
+  --text-code-mono--line-height: 1.6;
   --text-headline-h1: 32px / 1.2;
   --text-body-md: 16px / 1.6;
   --text-headline-h1-mobile: 24px / 1.2;
   --text-label-caps: 12px / 1.0;
   --text-display-lg: 48px / 1.1;
 
-  --radius: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-full: 9999px;
+  --radius: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-full: 0;
 
   --spacing-gutter: 24px;
   --spacing-grid-size: 60px;
@@ -101,7 +102,7 @@ body {
   width: 100%;
   height: 100%;
   background:
-    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+    linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 20%, transparent 20%),
     linear-gradient(
       90deg,
       rgba(255, 0, 0, 0.01),
@@ -109,11 +110,11 @@ body {
       rgba(0, 0, 255, 0.01)
     );
   background-size:
-    100% 4px,
+    100% 5px,
     3px 100%;
   z-index: 10000;
   pointer-events: none;
-  opacity: 0.2;
+  opacity: 0.02;
   animation: scanline-move 10s linear infinite;
 }
 
@@ -127,10 +128,10 @@ body {
 }
 
 .glow-cyan {
-  filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.6));
+  filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.6));
 }
 .glow-magenta {
-  filter: drop-shadow(0 0 8px rgba(255, 0, 60, 0.6));
+  filter: drop-shadow(0 0 10px rgba(255, 0, 60, 0.6));
 }
 
 .clipped-corner {
@@ -227,15 +228,15 @@ html {
   transform: translateY(-8px) scale(1.02);
 }
 .hover-lift.hover-cyan:hover {
-  box-shadow: 0 10px 30px -10px rgba(0, 245, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
   border-color: rgba(0, 245, 255, 0.5);
 }
 .hover-lift.hover-magenta:hover {
-  box-shadow: 0 10px 30px -10px rgba(255, 0, 60, 0.3);
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.3);
   border-color: rgba(255, 0, 60, 0.5);
 }
 .hover-lift.hover-yellow:hover {
-  box-shadow: 0 10px 30px -10px rgba(255, 230, 0, 0.3);
+  box-shadow: 0 0 10px rgba(255, 230, 0, 0.3);
   border-color: rgba(255, 230, 0, 0.5);
 }
 
@@ -299,5 +300,8 @@ html {
 @layer base {
   img, svg, video, canvas, audio, iframe, embed, object {
     vertical-align: unset;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
   }
 }
