@@ -1,3 +1,12 @@
+// Mobile menu toggle
+const mobileMenuBtn = document.querySelector("nav button");
+const navMenu = document.querySelector("nav .hidden.md\\:flex");
+let menuOpen = false;
+const menuMobileClasses = [
+  "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
+  "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
+];
+
 // Nav click: reveal target section immediately before smooth-scrolling
 let navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link) => {
@@ -14,10 +23,6 @@ navLinks.forEach((link) => {
     // Close mobile menu on link tap
     if (menuOpen) {
       menuOpen = false;
-      const menuMobileClasses = [
-        "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
-        "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
-      ];
       menuMobileClasses.forEach((cls) => navMenu.classList.remove(cls));
       navMenu.classList.add("hidden");
       mobileMenuBtn.setAttribute("aria-expanded", "false");
@@ -25,15 +30,6 @@ navLinks.forEach((link) => {
     }
   });
 });
-
-// Mobile menu toggle
-const mobileMenuBtn = document.querySelector("nav button");
-const navMenu = document.querySelector("nav .hidden.md\\:flex");
-let menuOpen = false;
-const menuMobileClasses = [
-  "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
-  "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
-];
 
 if (mobileMenuBtn && navMenu) {
   mobileMenuBtn.addEventListener("click", () => {
@@ -49,14 +45,16 @@ if (mobileMenuBtn && navMenu) {
     navMenu.setAttribute("aria-hidden", String(!menuOpen));
   });
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768 && menuOpen) {
-      menuOpen = false;
-      menuMobileClasses.forEach((cls) => navMenu.classList.remove(cls));
+    if (window.innerWidth >= 768) {
+      if (menuOpen) {
+        menuOpen = false;
+        menuMobileClasses.forEach((cls) => navMenu.classList.remove(cls));
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+      }
       navMenu.classList.remove("hidden");
       navMenu.classList.add("md:flex");
-      mobileMenuBtn.setAttribute("aria-expanded", "false");
       navMenu.setAttribute("aria-hidden", "true");
-    } else if (window.innerWidth < 768 && !menuOpen) {
+    } else if (!menuOpen) {
       navMenu.classList.remove("md:flex");
       navMenu.classList.add("hidden");
     }
@@ -198,6 +196,7 @@ function filterProjects(cat) {
       "bg-accent-magenta",
       "text-background",
       "font-bold",
+      "hover:brightness-110",
     );
     btn.classList.add("border", "border-accent-cyan/20", "text-accent-cyan");
     btn.style.background = "";
