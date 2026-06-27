@@ -23,133 +23,27 @@
     />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://nachosag.github.io/portfolio/" />
-    <meta property="twitter:title" content="NACHOSAG | Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://nachosag.github.io/portfolio/" />
+    <meta name="twitter:title" content="NACHOSAG | Software Engineer" />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Software Engineer passionate about system design, architecture, and building things that scale without drama."
     />
     <meta
-      property="twitter:image"
+      name="twitter:image"
       content="https://nachosag.github.io/portfolio/assets/og-image.png"
     />
 
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="dist.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Orbitron:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#e9feff",
-              "on-background": "#e5e1e7",
-              "on-secondary-fixed": "#410008",
-              "on-tertiary-fixed-variant": "#504700",
-              "secondary-container": "#ff525c",
-              "surface-container": "#1f1f23",
-              tertiary: "#fff9ee",
-              "inverse-surface": "#e5e1e7",
-              "on-error": "#690005",
-              "terminal-green": "#00ff41",
-              "on-secondary": "#680012",
-              secondary: "#ffb3b2",
-              "surface-dim": "#131317",
-              error: "#ffb4ab",
-              "ambient-purple": "#7b2ff7",
-              "on-tertiary-container": "#6d6200",
-              "on-surface-variant": "#b9caca",
-              "surface-container-lowest": "#0e0e12",
-              "on-primary": "#003739",
-              "surface-tint": "#00dce5",
-              "surface-variant": "#353439",
-              "surface-bright": "#39393d",
-              "surface-container-highest": "#353439",
-              "on-error-container": "#ffdad6",
-              "secondary-fixed-dim": "#ffb3b2",
-              "primary-container": "#00f5ff",
-              "surface-container-high": "#2a292e",
-              "on-tertiary-fixed": "#201c00",
-              outline: "#849495",
-              surface: "#131317",
-              "on-primary-fixed": "#002021",
-              "surface-bg": "#0d1120",
-              "surface-container-low": "#1b1b1f",
-              "outline-variant": "#3a494a",
-              "tertiary-fixed": "#fde400",
-              "inverse-primary": "#00696e",
-              "on-primary-container": "#006c71",
-              "on-tertiary": "#373100",
-              "error-container": "#93000a",
-              "on-primary-fixed-variant": "#004f53",
-              "tertiary-container": "#f7df00",
-              "tertiary-fixed-dim": "#dec800",
-              "inverse-on-surface": "#303034",
-              "on-surface": "#e5e1e7",
-              "secondary-fixed": "#ffdad8",
-              "grid-line": "rgba(0, 245, 255, 0.03)",
-              "on-secondary-fixed-variant": "#92001e",
-              background: "#050508",
-              "primary-fixed": "#63f7ff",
-              "on-secondary-container": "#5b000f",
-              "primary-fixed-dim": "#00dce5",
-              "accent-cyan": "#00f5ff",
-              "accent-magenta": "#ff003c",
-              "accent-yellow": "#ffe600",
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
-            spacing: {
-              gutter: "24px",
-              "grid-size": "60px",
-              "margin-desktop": "80px",
-              "margin-mobile": "20px",
-            },
-            fontFamily: {
-              "code-mono": ["Share Tech Mono"],
-              "headline-h1": ["Orbitron"],
-              "body-md": ["Inter"],
-              "headline-h1-mobile": ["Orbitron"],
-              "label-caps": ["Share Tech Mono"],
-              "display-lg": ["Orbitron"],
-            },
-            fontSize: {
-              "code-mono": ["14px", { lineHeight: "1.6", fontWeight: "400" }],
-              "headline-h1": [
-                "32px",
-                { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "700" },
-              ],
-              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-              "headline-h1-mobile": [
-                "24px",
-                { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "700" },
-              ],
-              "label-caps": [
-                "12px",
-                { lineHeight: "1.0", letterSpacing: "0.2em", fontWeight: "400" },
-              ],
-              "display-lg": [
-                "48px",
-                { lineHeight: "1.1", letterSpacing: "0.1em", fontWeight: "700" },
-              ],
-            },
-          },
-        },
-      };
-    </script>
   </head>
   <body class="font-body-md text-on-background bg-background relative">
+    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-accent-cyan focus:text-background focus:px-4 focus:py-2 focus:font-code-mono">Skip to content</a>
     <div class="scanlines-overlay"></div>
     <nav
       class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-accent-cyan/20 h-20 transition-all duration-300 shadow-[0_0_15px_rgba(0,245,255,0.1)]"
@@ -189,7 +83,7 @@
             >Contact</a
           >
         </div>
-        <button class="md:hidden text-accent-cyan">
+        <button class="md:hidden text-accent-cyan" aria-label="Toggle navigation" aria-expanded="false">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
@@ -257,7 +151,7 @@
               </a>
               <a
                 href="https://github.com/nachosag"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="inline-block border border-accent-cyan/30 text-accent-cyan px-8 py-4 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all"
               >
                 View Repositories
@@ -547,7 +441,7 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/sigrh"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -618,7 +512,7 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/cdm-calculator"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -687,7 +581,7 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/notebooklm-gallery"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -756,7 +650,7 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/wonderland-challenge"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -786,30 +680,35 @@
             <button
               class="px-4 py-2 bg-accent-magenta text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active"
               onclick="filterProjects('all')"
+              data-filter="all"
             >
               ALL
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
               onclick="filterProjects('backend')"
+              data-filter="backend"
             >
               BACKEND
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
               onclick="filterProjects('algorithms')"
+              data-filter="algorithms"
             >
               ALGORITHMS
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
               onclick="filterProjects('serverless')"
+              data-filter="serverless"
             >
               CLOUD
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
               onclick="filterProjects('fullstack')"
+              data-filter="fullstack"
             >
               UI/UX
             </button>
@@ -831,7 +730,7 @@
               >
               <a
                 href="https://github.com/nachosag/sigrh"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >sigrh</a
               >
@@ -850,7 +749,7 @@
               >
               <a
                 href="https://github.com/nachosag/cdm-calculator"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >cdm-calculator</a
               >
@@ -869,7 +768,7 @@
               >
               <a
                 href="https://github.com/nachosag/human-clustering"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >human-clustering</a
               >
@@ -888,7 +787,7 @@
               >
               <a
                 href="https://github.com/nachosag/lights-out-game"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >lights-out-game</a
               >
@@ -907,7 +806,7 @@
               >
               <a
                 href="https://github.com/nachosag/wonderland-challenge"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >wonderland-challenge</a
               >
@@ -926,7 +825,7 @@
               >
               <a
                 href="https://github.com/nachosag/siu-guarani-clone"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >siu-guarani-clone</a
               >
@@ -945,7 +844,7 @@
               >
               <a
                 href="https://github.com/nachosag/notebooklm-gallery"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >notebooklm-gallery</a
               >
@@ -964,7 +863,7 @@
               >
               <a
                 href="https://github.com/nachosag/async-api"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >async-api</a
               >
@@ -983,7 +882,7 @@
               >
               <a
                 href="https://github.com/nachosag/github-activity-cli"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >github-activity-cli</a
               >
@@ -1002,7 +901,7 @@
               >
               <a
                 href="https://github.com/nachosag/notes-app"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >notes-app</a
               >
@@ -1021,7 +920,7 @@
               >
               <a
                 href="https://github.com/nachosag/auth-flow"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >auth-flow</a
               >
@@ -1448,14 +1347,14 @@
             <a
               class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3"
               href="https://github.com/nachosag"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <span class="material-symbols-outlined">link</span> GITHUB
             </a>
             <a
               class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3"
               href="https://linkedin.com/in/ignacio-borlenghi-74b720221"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <span class="material-symbols-outlined">badge</span> LINKEDIN
             </a>
@@ -1482,7 +1381,7 @@
           <div
             class="w-12 h-12 flex items-center justify-center border border-accent-cyan/20 text-accent-cyan hover:border-accent-cyan transition-colors"
           >
-            <a href="https://github.com/nachosag" target="_blank">
+            <a href="https://github.com/nachosag" target="_blank" rel="noopener noreferrer">
               <span class="material-symbols-outlined">qr_code_2</span>
             </a>
           </div>

@@ -17,21 +17,29 @@ navLinks.forEach((link) => {
 // Mobile menu toggle
 const mobileMenuBtn = document.querySelector("nav button");
 const navMenu = document.querySelector("nav .hidden.md\\:flex");
+let menuOpen = false;
 if (mobileMenuBtn && navMenu) {
   mobileMenuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("hidden");
-    navMenu.classList.toggle("flex");
-    navMenu.classList.toggle("flex-col");
-    navMenu.classList.toggle("absolute");
-    navMenu.classList.toggle("top-20");
-    navMenu.classList.toggle("left-0");
-    navMenu.classList.toggle("right-0");
-    navMenu.classList.toggle("bg-background");
-    navMenu.classList.toggle("border-b");
-    navMenu.classList.toggle("border-accent-cyan/20");
-    navMenu.classList.toggle("p-4");
-    navMenu.classList.toggle("gap-4");
-    navMenu.classList.toggle("z-50");
+    menuOpen = !menuOpen;
+    const menuClasses = [
+      "hidden", "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
+      "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
+    ];
+    menuClasses.forEach((cls) => navMenu.classList[menuOpen ? "add" : "remove"](cls));
+    mobileMenuBtn.setAttribute("aria-expanded", String(menuOpen));
+    navMenu.setAttribute("aria-hidden", String(!menuOpen));
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768 && menuOpen) {
+      menuOpen = false;
+      const menuClasses = [
+        "hidden", "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
+        "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
+      ];
+      menuClasses.forEach((cls) => navMenu.classList.remove(cls));
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      navMenu.setAttribute("aria-hidden", "true");
+    }
   });
 }
 
@@ -88,48 +96,56 @@ const sectionToNav = {
   contact: "contact",
 };
 
+let scrollTicking = false;
 window.addEventListener("scroll", () => {
-  let currentSection = "";
-  const sections = document.querySelectorAll("section");
-  const scrollPosition = window.scrollY + 150;
+  if (!scrollTicking) {
+    requestAnimationFrame(() => {
+      let currentSection = "";
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.scrollY + 150;
 
-  const isAtBottom =
-    window.innerHeight + window.scrollY >=
-    document.documentElement.scrollHeight - 50;
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 50;
 
-  if (isAtBottom) {
-    currentSection = "contact";
-  } else {
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      if (scrollPosition >= sectionTop) {
-        currentSection = section.getAttribute("id");
+      if (isAtBottom) {
+        currentSection = "contact";
+      } else {
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            currentSection = section.getAttribute("id");
+          }
+        });
       }
+
+      // Resolve section ID to nav link ID
+      const currentNav = sectionToNav[currentSection] || currentSection;
+
+      navLinks.forEach((link) => {
+        link.classList.remove(
+          "text-accent-cyan",
+          "border-b",
+          "border-accent-cyan",
+          "pb-1",
+        );
+        link.classList.add("text-on-surface-variant");
+        const linkSection = link.getAttribute("href")?.replace("#", "");
+        if (linkSection && sectionToNav[linkSection] === currentNav) {
+          link.classList.add(
+            "text-accent-cyan",
+            "border-b",
+            "border-accent-cyan",
+            "pb-1",
+          );
+          link.classList.remove("text-on-surface-variant");
+        }
+      });
+
+      scrollTicking = false;
     });
+    scrollTicking = true;
   }
-
-  // Resolve section ID to nav link ID
-  const currentNav = sectionToNav[currentSection] || currentSection;
-
-  navLinks.forEach((link) => {
-    link.classList.remove(
-      "text-accent-cyan",
-      "border-b",
-      "border-accent-cyan",
-      "pb-1",
-    );
-    link.classList.add("text-on-surface-variant");
-    const linkSection = link.getAttribute("href")?.replace("#", "");
-    if (linkSection && sectionToNav[linkSection] === currentNav) {
-      link.classList.add(
-        "text-accent-cyan",
-        "border-b",
-        "border-accent-cyan",
-        "pb-1",
-      );
-      link.classList.remove("text-on-surface-variant");
-    }
-  });
 });
 
 window.dispatchEvent(new Event("scroll"));
@@ -146,7 +162,7 @@ function filterProjects(cat) {
     btn.style.background = "";
   });
 
-  const activeBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
+  const activeBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
   if (activeBtn) {
     activeBtn.classList.remove(
       "border",
