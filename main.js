@@ -10,7 +10,7 @@ const menuMobileClasses = [
 // Nav click: reveal target section immediately before smooth-scrolling
 let navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
+  link.addEventListener("click", () => {
     const href = link.getAttribute("href");
     if (href && href.startsWith("#")) {
       const target = document.querySelector(href);
@@ -88,7 +88,7 @@ function triggerTypewriter(element) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     if (text === "NACHOSAG") {
       element.innerHTML =
-        'NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span>';
+        'NACHO<span class="text-accent-cyan text-glow-cyan">SAG</span>';
     } else {
       element.textContent = text;
     }
@@ -107,7 +107,7 @@ function triggerTypewriter(element) {
     } else {
       if (text === "NACHOSAG") {
         element.innerHTML =
-          'NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span>';
+          'NACHO<span class="text-accent-cyan text-glow-cyan">SAG</span>';
       }
     }
   }

@@ -1213,10 +1213,6 @@ html {
   background: #00f5ff;
   color: #050508;
 }
-::-moz-selection {
-  background: #00f5ff;
-  color: #050508;
-}
 .terminal-header {
   background: linear-gradient(90deg, #1b1b1f 0%, #0e0e12 100%);
 }
@@ -1229,23 +1225,35 @@ html {
   z-index: -1;
   filter: blur(80px);
 }
+.ambient-glow-cyan {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 245, 255, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(80px);
+}
+.text-glow-cyan {
+  text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;
+}
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
 }
-.hover-cyan:hover {
+.hover-lift.hover-cyan:hover {
   box-shadow: 0 10px 30px -10px rgba(0, 245, 255, 0.3);
-  border-color: rgba(0, 245, 255, 0.5) !important;
+  border-color: rgba(0, 245, 255, 0.5);
 }
-.hover-magenta:hover {
+.hover-lift.hover-magenta:hover {
   box-shadow: 0 10px 30px -10px rgba(255, 0, 60, 0.3);
-  border-color: rgba(255, 0, 60, 0.5) !important;
+  border-color: rgba(255, 0, 60, 0.5);
 }
-.hover-yellow:hover {
+.hover-lift.hover-yellow:hover {
   box-shadow: 0 10px 30px -10px rgba(255, 230, 0, 0.3);
-  border-color: rgba(255, 230, 0, 0.5) !important;
+  border-color: rgba(255, 230, 0, 0.5);
 }
 @keyframes pulse-border {
   0%, 100% {
