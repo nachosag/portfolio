@@ -1,49 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
   <head>
-    <meta charset="utf-8" >
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>NachoSAG</title>
     <meta
       name="description"
       content="Ignacio Borlenghi — Software Engineer. Building backend systems, distributed architectures, and clean solutions that work under pressure."
-    >
+    />
 
     <!-- Open Graph / LinkedIn / Facebook -->
-    <meta property="og:type" content="website" >
-    <meta property="og:url" content="https://nachosag.github.io/portfolio/" >
-    <meta property="og:title" content="NACHOSAG | Software Engineer" >
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nachosag.github.io/portfolio/" />
+    <meta property="og:title" content="NACHOSAG | Software Engineer" />
     <meta
       property="og:description"
       content="Software Engineer passionate about system design, architecture, and building things that scale without drama."
-    >
+    />
     <meta
       property="og:image"
       content="https://nachosag.github.io/portfolio/assets/og-image.png"
-    >
+    />
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" >
-    <meta name="twitter:url" content="https://nachosag.github.io/portfolio/" >
-    <meta name="twitter:title" content="NACHOSAG | Software Engineer" >
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://nachosag.github.io/portfolio/" />
+    <meta name="twitter:title" content="NACHOSAG | Software Engineer" />
     <meta
       name="twitter:description"
       content="Software Engineer passionate about system design, architecture, and building things that scale without drama."
-    >
+    />
     <meta
       name="twitter:image"
       content="https://nachosag.github.io/portfolio/assets/og-image.png"
-    >
+    />
 
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" >
-    <link rel="stylesheet" href="dist.css" >
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="dist.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Orbitron:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
-    >
+    />
   </head>
   <body class="font-body-md text-on-background bg-background relative">
-    <a href="#home" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-accent-cyan focus:text-background focus:px-4 focus:py-2 focus:font-code-mono">Skip to content</a>
+    <a
+      href="#home"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:bg-accent-cyan focus:text-background focus:px-4 focus:py-2 focus:font-code-mono"
+      >Skip to content</a
+    >
     <div class="scanlines-overlay" aria-hidden="true"></div>
     <nav
       class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-accent-cyan/20 h-20 transition-all duration-300 shadow-[0_0_15px_rgba(0,245,255,0.1)]"
@@ -51,7 +55,10 @@
       <div
         class="flex items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-screen-2xl mx-auto justify-center"
       >
-        <div id="mobile-nav" class="hidden md:flex items-center gap-8 font-code-mono text-code-mono">
+        <div
+          id="mobile-nav"
+          class="hidden md:flex items-center gap-8 font-code-mono text-code-mono"
+        >
           <a
             class="text-on-surface-variant hover:text-accent-cyan transition-colors"
             href="#home"
@@ -83,7 +90,13 @@
             >Contact</a
           >
         </div>
-        <button class="md:hidden text-accent-cyan" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <button
+          class="md:hidden text-accent-cyan"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
@@ -91,13 +104,11 @@
     <main class="relative pt-20">
       <!-- Hero Section -->
       <section
-        class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden"
+        class="relative min-h-230.25 flex items-center px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden"
         id="home"
       >
         <div class="ambient-glow -top-20 -left-20"></div>
-        <div
-          class="ambient-glow-cyan bottom-0 right-0"
-        ></div>
+        <div class="ambient-glow-cyan bottom-0 right-0"></div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
           <!-- Left Content -->
           <div class="reveal active">
@@ -105,10 +116,7 @@
               class="font-headline-h1 text-[48px] md:text-[80px] leading-tight tracking-tighter mb-4 uppercase typewriter"
               data-text="NACHOSAG"
             >
-              NACHO<span
-                class="text-accent-cyan text-glow-cyan"
-                >SAG</span
-              >
+              NACHO<span class="text-accent-cyan text-glow-cyan">SAG</span>
             </h1>
             <h2
               class="font-code-mono text-xl md:text-2xl text-accent-magenta mb-8 uppercase tracking-widest"
@@ -138,7 +146,8 @@
               </a>
               <a
                 href="https://github.com/nachosag"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="inline-block border border-accent-cyan/30 text-accent-cyan px-8 py-4 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all"
               >
                 View Repositories
@@ -146,7 +155,7 @@
             </div>
           </div>
           <!-- Right Terminal -->
-          <div class="reveal delay-[300ms] active">
+          <div class="reveal delay-300 active">
             <div
               class="bg-surface-container-lowest border border-accent-cyan/20 rounded-lg overflow-hidden shadow-2xl relative terminal-pulse"
             >
@@ -214,7 +223,7 @@
           </h2>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          <div class="space-y-8 reveal delay-[100ms]">
+          <div class="space-y-8 reveal delay-100">
             <p
               class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-cyan/20 pl-8 font-code-mono"
             >
@@ -258,9 +267,9 @@
               <strong class="text-accent-cyan">velocity</strong>.
             </p>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-[200ms]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-200">
             <div
-              class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift hover-cyan border border-transparent"
+              class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift hover-cyan border"
             >
               <span class="font-code-mono text-xs text-accent-cyan mb-2 block"
                 >// SYST_ARCH</span
@@ -281,7 +290,7 @@
               </p>
             </div>
             <div
-              class="bg-surface-container-low p-6 border-l-4 border-accent-magenta hover-lift hover-magenta border border-transparent"
+              class="bg-surface-container-low p-6 border-l-4 border-accent-magenta hover-lift hover-magenta border"
             >
               <span class="font-code-mono text-xs text-accent-magenta mb-2 block"
                 >// PERF_OPT</span
@@ -302,7 +311,7 @@
               </p>
             </div>
             <div
-              class="bg-surface-container-low p-6 border-l-4 border-accent-yellow hover-lift hover-yellow border border-transparent"
+              class="bg-surface-container-low p-6 border-l-4 border-accent-yellow hover-lift hover-yellow border"
             >
               <span class="font-code-mono text-xs text-accent-yellow mb-2 block"
                 >// CODE_QUAL</span
@@ -325,7 +334,7 @@
               </p>
             </div>
             <div
-              class="bg-surface-container-low p-6 border-l-4 border-primary hover-lift hover-cyan border border-transparent"
+              class="bg-surface-container-low p-6 border-l-4 border-primary hover-lift hover-cyan border"
             >
               <span class="font-code-mono text-xs text-primary mb-2 block"
                 >// MENTOR_X</span
@@ -428,7 +437,8 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/sigrh"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -437,7 +447,7 @@
             </div>
             <!-- CDM Calculator -->
             <div
-              class="reveal delay-[100ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
+              class="reveal delay-100 group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
             >
               <div
                 class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
@@ -499,7 +509,8 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/cdm-calculator"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -508,7 +519,7 @@
             </div>
             <!-- NotebookLM Gallery -->
             <div
-              class="reveal delay-[200ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
+              class="reveal delay-200 group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
             >
               <div
                 class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
@@ -568,7 +579,8 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/notebooklm-gallery"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -577,7 +589,7 @@
             </div>
             <!-- MakerDAO Job Monitor -->
             <div
-              class="reveal delay-[300ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
+              class="reveal delay-300 group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
             >
               <div
                 class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
@@ -637,7 +649,8 @@
                 <a
                   class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
                   href="https://github.com/nachosag/wonderland-challenge"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   ACCESS_SOURCE
                   <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -663,37 +676,45 @@
               PROJECT_EXPLORER
             </h2>
           </div>
-          <div id="filter-bar" class="flex flex-wrap gap-4 font-code-mono text-[10px] uppercase">
+          <div
+            id="filter-bar"
+            class="flex flex-wrap gap-4 font-code-mono text-[10px] uppercase"
+          >
             <button
-              class="px-4 py-2 bg-accent-magenta text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active" type="button"
+              class="px-4 py-2 bg-accent-magenta text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active"
+              type="button"
               data-filter="all"
               aria-pressed="true"
             >
               ALL
             </button>
             <button
-              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" type="button"
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              type="button"
               data-filter="backend"
               aria-pressed="false"
             >
               BACKEND
             </button>
             <button
-              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" type="button"
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              type="button"
               data-filter="algorithms"
               aria-pressed="false"
             >
               ALGORITHMS
             </button>
             <button
-              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" type="button"
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              type="button"
               data-filter="serverless"
               aria-pressed="false"
             >
               CLOUD
             </button>
             <button
-              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" type="button"
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              type="button"
               data-filter="fullstack"
               aria-pressed="false"
             >
@@ -717,7 +738,8 @@
               >
               <a
                 href="https://github.com/nachosag/sigrh"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >sigrh</a
               >
@@ -726,7 +748,7 @@
           </div>
           <!-- cdm-calculator -->
           <div
-            class="reveal delay-[50ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-50 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="algorithms"
           >
             <div class="flex items-center gap-3">
@@ -736,7 +758,8 @@
               >
               <a
                 href="https://github.com/nachosag/cdm-calculator"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >cdm-calculator</a
               >
@@ -745,7 +768,7 @@
           </div>
           <!-- human-clustering -->
           <div
-            class="reveal delay-[100ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-100 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="algorithms"
           >
             <div class="flex items-center gap-3">
@@ -755,7 +778,8 @@
               >
               <a
                 href="https://github.com/nachosag/human-clustering"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >human-clustering</a
               >
@@ -764,7 +788,7 @@
           </div>
           <!-- lights-out-game -->
           <div
-            class="reveal delay-[150ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-150 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="backend"
           >
             <div class="flex items-center gap-3">
@@ -774,7 +798,8 @@
               >
               <a
                 href="https://github.com/nachosag/lights-out-game"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >lights-out-game</a
               >
@@ -783,7 +808,7 @@
           </div>
           <!-- wonderland-challenge -->
           <div
-            class="reveal delay-[200ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-200 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="backend"
           >
             <div class="flex items-center gap-3">
@@ -793,7 +818,8 @@
               >
               <a
                 href="https://github.com/nachosag/wonderland-challenge"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >wonderland-challenge</a
               >
@@ -802,7 +828,7 @@
           </div>
           <!-- siu-guarani-clone -->
           <div
-            class="reveal delay-[250ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-250 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="backend"
           >
             <div class="flex items-center gap-3">
@@ -812,7 +838,8 @@
               >
               <a
                 href="https://github.com/nachosag/siu-guarani-clone"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >siu-guarani-clone</a
               >
@@ -821,7 +848,7 @@
           </div>
           <!-- notebooklm-gallery -->
           <div
-            class="reveal delay-[300ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-300 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="serverless"
           >
             <div class="flex items-center gap-3">
@@ -831,7 +858,8 @@
               >
               <a
                 href="https://github.com/nachosag/notebooklm-gallery"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >notebooklm-gallery</a
               >
@@ -840,7 +868,7 @@
           </div>
           <!-- async-api -->
           <div
-            class="reveal delay-[350ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-350 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="backend"
           >
             <div class="flex items-center gap-3">
@@ -850,7 +878,8 @@
               >
               <a
                 href="https://github.com/nachosag/async-api"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >async-api</a
               >
@@ -859,7 +888,7 @@
           </div>
           <!-- github-activity-cli -->
           <div
-            class="reveal delay-[400ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-400 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="fullstack"
           >
             <div class="flex items-center gap-3">
@@ -869,7 +898,8 @@
               >
               <a
                 href="https://github.com/nachosag/github-activity-cli"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >github-activity-cli</a
               >
@@ -878,7 +908,7 @@
           </div>
           <!-- notes-app -->
           <div
-            class="reveal delay-[450ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-450 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="fullstack"
           >
             <div class="flex items-center gap-3">
@@ -888,7 +918,8 @@
               >
               <a
                 href="https://github.com/nachosag/notes-app"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >notes-app</a
               >
@@ -897,7 +928,7 @@
           </div>
           <!-- auth-flow -->
           <div
-            class="reveal delay-[500ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            class="reveal delay-500 bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
             data-cat="backend"
           >
             <div class="flex items-center gap-3">
@@ -907,7 +938,8 @@
               >
               <a
                 href="https://github.com/nachosag/auth-flow"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
                 >auth-flow</a
               >
@@ -957,7 +989,7 @@
               </div>
             </div>
             <div
-              class="reveal delay-[100ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all"
+              class="reveal delay-100 hover-lift hover-magenta p-2 border border-transparent rounded transition-all"
             >
               <h4
                 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase"
@@ -983,7 +1015,7 @@
               </div>
             </div>
             <div
-              class="reveal delay-[200ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all"
+              class="reveal delay-200 hover-lift hover-yellow p-2 border border-transparent rounded transition-all"
             >
               <h4
                 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase"
@@ -1012,7 +1044,7 @@
               </div>
             </div>
             <div
-              class="reveal delay-[300ms] hover-lift hover-cyan p-2 border border-transparent rounded transition-all"
+              class="reveal delay-300 hover-lift hover-cyan p-2 border border-transparent rounded transition-all"
             >
               <h4
                 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase"
@@ -1038,7 +1070,7 @@
               </div>
             </div>
             <div
-              class="reveal delay-[400ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all"
+              class="reveal delay-400 hover-lift hover-magenta p-2 border border-transparent rounded transition-all"
             >
               <h4
                 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase"
@@ -1070,7 +1102,7 @@
               </div>
             </div>
             <div
-              class="reveal delay-[500ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all"
+              class="reveal delay-500 hover-lift hover-yellow p-2 border border-transparent rounded transition-all"
             >
               <h4
                 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase"
@@ -1214,7 +1246,7 @@
             </div>
           </div>
           <!-- Pillar Cards -->
-          <div class="reveal delay-[200ms]">
+          <div class="reveal delay-200">
             <span
               class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase"
               >// DEVELOPMENT_METHODOLOGY</span
@@ -1334,14 +1366,16 @@
             <a
               class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3"
               href="https://github.com/nachosag"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span class="material-symbols-outlined">link</span> GITHUB
             </a>
             <a
               class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3"
               href="https://linkedin.com/in/ignacio-borlenghi-74b720221"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span class="material-symbols-outlined">badge</span> LINKEDIN
             </a>
@@ -1368,7 +1402,12 @@
           <div
             class="w-12 h-12 flex items-center justify-center border border-accent-cyan/20 text-accent-cyan hover:border-accent-cyan transition-colors"
           >
-            <a href="https://github.com/nachosag" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+            <a
+              href="https://github.com/nachosag"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+            >
               <span class="material-symbols-outlined">qr_code_2</span>
             </a>
           </div>
