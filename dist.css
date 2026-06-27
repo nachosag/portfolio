@@ -1275,11 +1275,14 @@ html {
   html {
     scroll-behavior: auto !important;
   }
-  .reveal, .hover-lift, .scanlines-overlay, .terminal-pulse, .flicker-overlay, .cursor-blink {
+  .reveal, .hover-lift, .terminal-pulse, .flicker-overlay, .cursor-blink {
     animation: none !important;
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
+  }
+  .scanlines-overlay {
+    animation: none !important;
   }
 }
 @property --tw-space-y-reverse {

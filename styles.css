@@ -271,7 +271,6 @@ html {
   }
   .reveal,
   .hover-lift,
-  .scanlines-overlay,
   .terminal-pulse,
   .flicker-overlay,
   .cursor-blink {
@@ -279,5 +278,8 @@ html {
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
+  }
+  .scanlines-overlay {
+    animation: none !important;
   }
 }

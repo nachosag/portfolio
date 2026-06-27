@@ -53,9 +53,11 @@ if (mobileMenuBtn && navMenu) {
       }
       navMenu.classList.remove("hidden");
       navMenu.classList.add("md:flex");
+      navMenu.setAttribute("aria-hidden", "false");
     } else if (!menuOpen) {
       navMenu.classList.remove("md:flex");
       navMenu.classList.add("hidden");
+      navMenu.setAttribute("aria-hidden", "true");
     }
   });
 }
@@ -112,7 +114,6 @@ function triggerTypewriter(element) {
   type();
 }
 
-navLinks = document.querySelectorAll("nav a");
 // Map section IDs to nav link IDs (multiple sections can map to same nav item)
 const sectionToNav = {
   home: "home",
@@ -123,13 +124,13 @@ const sectionToNav = {
   workflow: "workflow",
   contact: "contact",
 };
+const sections = document.querySelectorAll("section");
 
 let scrollTicking = false;
 window.addEventListener("scroll", () => {
   if (!scrollTicking) {
     requestAnimationFrame(() => {
       let currentSection = "";
-      const sections = document.querySelectorAll("section");
       const scrollPosition = window.scrollY + 150;
 
       const isAtBottom =
