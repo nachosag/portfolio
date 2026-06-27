@@ -18,25 +18,30 @@ navLinks.forEach((link) => {
 const mobileMenuBtn = document.querySelector("nav button");
 const navMenu = document.querySelector("nav .hidden.md\\:flex");
 let menuOpen = false;
+const menuMobileClasses = [
+  "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
+  "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
+];
+
 if (mobileMenuBtn && navMenu) {
   mobileMenuBtn.addEventListener("click", () => {
     menuOpen = !menuOpen;
-    const menuClasses = [
-      "hidden", "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
-      "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
-    ];
-    menuClasses.forEach((cls) => navMenu.classList[menuOpen ? "add" : "remove"](cls));
+    if (menuOpen) {
+      navMenu.classList.remove("hidden");
+      menuMobileClasses.forEach((cls) => navMenu.classList.add(cls));
+    } else {
+      menuMobileClasses.forEach((cls) => navMenu.classList.remove(cls));
+      navMenu.classList.add("hidden");
+    }
     mobileMenuBtn.setAttribute("aria-expanded", String(menuOpen));
     navMenu.setAttribute("aria-hidden", String(!menuOpen));
   });
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 768 && menuOpen) {
       menuOpen = false;
-      const menuClasses = [
-        "hidden", "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
-        "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
-      ];
-      menuClasses.forEach((cls) => navMenu.classList.remove(cls));
+      menuMobileClasses.forEach((cls) => navMenu.classList.remove(cls));
+      navMenu.classList.remove("hidden");
+      navMenu.classList.add("md:flex");
       mobileMenuBtn.setAttribute("aria-expanded", "false");
       navMenu.setAttribute("aria-hidden", "true");
     }
@@ -150,6 +155,14 @@ window.addEventListener("scroll", () => {
 
 window.dispatchEvent(new Event("scroll"));
 
+// Filter buttons event delegation
+document.querySelector(".flex.flex-wrap.gap-4")?.addEventListener("click", (e) => {
+  const btn = e.target.closest(".filter-btn");
+  if (btn?.dataset.filter) {
+    filterProjects(btn.dataset.filter);
+  }
+});
+
 function filterProjects(cat) {
   document.querySelectorAll(".filter-btn").forEach((btn) => {
     btn.classList.remove(
@@ -160,6 +173,7 @@ function filterProjects(cat) {
     );
     btn.classList.add("border", "border-accent-cyan/20", "text-accent-cyan");
     btn.style.background = "";
+    btn.setAttribute("aria-pressed", "false");
   });
 
   const activeBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
@@ -176,6 +190,7 @@ function filterProjects(cat) {
       "font-bold",
       "hover:brightness-110",
     );
+    activeBtn.setAttribute("aria-pressed", "true");
   }
 
   document.querySelectorAll("#explorer-grid > div").forEach((card) => {

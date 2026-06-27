@@ -83,7 +83,7 @@
             >Contact</a
           >
         </div>
-        <button class="md:hidden text-accent-cyan" aria-label="Toggle navigation" aria-expanded="false">
+        <button class="md:hidden text-accent-cyan" type="button" aria-label="Toggle navigation" aria-expanded="false">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
@@ -111,7 +111,6 @@
             <h1
               class="font-headline-h1 text-[48px] md:text-[80px] leading-tight tracking-tighter mb-4 uppercase typewriter"
               data-text="NACHOSAG"
-              data-typed="true"
             >
               NACHO<span
                 class="text-accent-cyan"
@@ -679,35 +678,30 @@
           <div class="flex flex-wrap gap-4 font-code-mono text-[10px] uppercase">
             <button
               class="px-4 py-2 bg-accent-magenta text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active"
-              onclick="filterProjects('all')"
               data-filter="all"
             >
               ALL
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
-              onclick="filterProjects('backend')"
               data-filter="backend"
             >
               BACKEND
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
-              onclick="filterProjects('algorithms')"
               data-filter="algorithms"
             >
               ALGORITHMS
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
-              onclick="filterProjects('serverless')"
               data-filter="serverless"
             >
               CLOUD
             </button>
             <button
               class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
-              onclick="filterProjects('fullstack')"
               data-filter="fullstack"
             >
               UI/UX
