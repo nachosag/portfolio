@@ -1135,12 +1135,14 @@
     }
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #050508;
   background-image: linear-gradient(to right, rgba(0, 245, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 .scanlines-overlay {
   position: fixed;
@@ -1270,6 +1272,9 @@ html {
   animation: flicker-glow 8s infinite alternate;
 }
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
   .reveal, .hover-lift, .scanlines-overlay, .terminal-pulse, .flicker-overlay, .cursor-blink {
     animation: none !important;
     transition: none !important;

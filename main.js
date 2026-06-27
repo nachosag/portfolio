@@ -11,6 +11,18 @@ navLinks.forEach((link) => {
         });
       }
     }
+    // Close mobile menu on link tap
+    if (menuOpen) {
+      menuOpen = false;
+      const menuMobileClasses = [
+        "flex", "flex-col", "absolute", "top-20", "left-0", "right-0",
+        "bg-background", "border-b", "border-accent-cyan/20", "p-4", "gap-4", "z-50",
+      ];
+      menuMobileClasses.forEach((cls) => navMenu.classList.remove(cls));
+      navMenu.classList.add("hidden");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      navMenu.setAttribute("aria-hidden", "true");
+    }
   });
 });
 
@@ -44,6 +56,9 @@ if (mobileMenuBtn && navMenu) {
       navMenu.classList.add("md:flex");
       mobileMenuBtn.setAttribute("aria-expanded", "false");
       navMenu.setAttribute("aria-hidden", "true");
+    } else if (window.innerWidth < 768 && !menuOpen) {
+      navMenu.classList.remove("md:flex");
+      navMenu.classList.add("hidden");
     }
   });
 }

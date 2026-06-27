@@ -81,6 +81,10 @@
   --spacing-margin-mobile: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #050508;
   background-image:
@@ -88,7 +92,6 @@ body {
     linear-gradient(to bottom, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 .scanlines-overlay {
@@ -263,6 +266,9 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
   .reveal,
   .hover-lift,
   .scanlines-overlay,
