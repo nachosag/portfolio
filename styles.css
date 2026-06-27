@@ -68,7 +68,7 @@
   --text-headline-h1: 32px / 1.2;
   --text-body-md: 16px / 1.6;
   --text-headline-h1-mobile: 24px / 1.2;
-  --text-label-caps: 12px / 1.0;
+  --text-label-caps: 12px / 1;
   --text-display-lg: 48px / 1.1;
 
   --radius: 0;
@@ -298,10 +298,22 @@ html {
 
 /* Fix Tailwind v4 base reset warning: vertical-align is ignored on display: block */
 @layer base {
-  img, svg, video, canvas, audio, iframe, embed, object {
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
     vertical-align: unset;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: 700;
   }
 }
