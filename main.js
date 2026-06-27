@@ -83,15 +83,26 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 function triggerTypewriter(element) {
   if (element.dataset.typed === "true") return;
   const text = element.dataset.text || element.innerText;
-  element.innerHTML = "";
   element.dataset.typed = "true";
 
+  // Respect prefers-reduced-motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (text === "NACHOSAG") {
+      element.innerHTML =
+        'NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span>';
+    } else {
+      element.textContent = text;
+    }
+    return;
+  }
+
+  element.innerHTML = "";
   let i = 0;
   const speed = 100;
 
   function type() {
     if (i < text.length) {
-      element.innerHTML += text.charAt(i);
+      element.textContent += text.charAt(i);
       i++;
       setTimeout(type, speed);
     } else {
@@ -150,6 +161,7 @@ window.addEventListener("scroll", () => {
           "pb-1",
         );
         link.classList.add("text-on-surface-variant");
+        link.removeAttribute("aria-current");
         const linkSection = link.getAttribute("href")?.replace("#", "");
         if (linkSection && sectionToNav[linkSection] === currentNav) {
           link.classList.add(
@@ -159,6 +171,7 @@ window.addEventListener("scroll", () => {
             "pb-1",
           );
           link.classList.remove("text-on-surface-variant");
+          link.setAttribute("aria-current", "section");
         }
       });
 
