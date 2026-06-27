@@ -1,932 +1,1646 @@
-<!DOCTYPE html>
-<html class="dark" lang="en" style="scroll-behavior: smooth;">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>NACHOSAG // SOFTWARE ENGINEER</title>
-<meta name="description" content="Ignacio Borlenghi — Software Engineer. Building backend systems, distributed architectures, and clean solutions that work under pressure.">
+<!doctype html>
+<html class="dark" lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NachoSAG</title>
+    <meta
+      name="description"
+      content="Ignacio Borlenghi — Software Engineer. Building backend systems, distributed architectures, and clean solutions that work under pressure."
+    />
 
-<!-- Open Graph / LinkedIn / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nachosag.github.io/portfolio/">
-<meta property="og:title" content="NACHOSAG | Software Engineer">
-<meta property="og:description" content="Software Engineer passionate about system design, architecture, and building things that scale without drama.">
-<meta property="og:image" content="https://nachosag.github.io/portfolio/assets/og-image.png">
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nachosag.github.io/portfolio/" />
+    <meta property="og:title" content="NACHOSAG | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer passionate about system design, architecture, and building things that scale without drama."
+    />
+    <meta
+      property="og:image"
+      content="https://nachosag.github.io/portfolio/assets/og-image.png"
+    />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://nachosag.github.io/portfolio/">
-<meta property="twitter:title" content="NACHOSAG | Software Engineer">
-<meta property="twitter:description" content="Software Engineer passionate about system design, architecture, and building things that scale without drama.">
-<meta property="twitter:image" content="https://nachosag.github.io/portfolio/assets/og-image.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nachosag.github.io/portfolio/" />
+    <meta property="twitter:title" content="NACHOSAG | Software Engineer" />
+    <meta
+      property="twitter:description"
+      content="Software Engineer passionate about system design, architecture, and building things that scale without drama."
+    />
+    <meta
+      property="twitter:image"
+      content="https://nachosag.github.io/portfolio/assets/og-image.png"
+    />
 
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="apple-touch-icon" sizes="512x512" href="assets/favicon-512.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="assets/favicon-512.png" />
+    <link rel="stylesheet" href="styles.css" />
 
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Orbitron:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "primary": "#e9feff",
-                      "on-background": "#e5e1e7",
-                      "on-secondary-fixed": "#410008",
-                      "on-tertiary-fixed-variant": "#504700",
-                      "secondary-container": "#ff525c",
-                      "surface-container": "#1f1f23",
-                      "tertiary": "#fff9ee",
-                      "inverse-surface": "#e5e1e7",
-                      "on-error": "#690005",
-                      "terminal-green": "#00ff41",
-                      "on-secondary": "#680012",
-                      "secondary": "#ffb3b2",
-                      "surface-dim": "#131317",
-                      "error": "#ffb4ab",
-                      "ambient-purple": "#7b2ff7",
-                      "on-tertiary-container": "#6d6200",
-                      "on-surface-variant": "#b9caca",
-                      "surface-container-lowest": "#0e0e12",
-                      "on-primary": "#003739",
-                      "surface-tint": "#00dce5",
-                      "surface-variant": "#353439",
-                      "surface-bright": "#39393d",
-                      "surface-container-highest": "#353439",
-                      "on-error-container": "#ffdad6",
-                      "secondary-fixed-dim": "#ffb3b2",
-                      "primary-container": "#00f5ff",
-                      "surface-container-high": "#2a292e",
-                      "on-tertiary-fixed": "#201c00",
-                      "outline": "#849495",
-                      "surface": "#131317",
-                      "on-primary-fixed": "#002021",
-                      "surface-bg": "#0d1120",
-                      "surface-container-low": "#1b1b1f",
-                      "outline-variant": "#3a494a",
-                      "tertiary-fixed": "#fde400",
-                      "inverse-primary": "#00696e",
-                      "on-primary-container": "#006c71",
-                      "on-tertiary": "#373100",
-                      "error-container": "#93000a",
-                      "on-primary-fixed-variant": "#004f53",
-                      "tertiary-container": "#f7df00",
-                      "tertiary-fixed-dim": "#dec800",
-                      "inverse-on-surface": "#303034",
-                      "on-surface": "#e5e1e7",
-                      "secondary-fixed": "#ffdad8",
-                      "grid-line": "rgba(0, 245, 255, 0.03)",
-                      "on-secondary-fixed-variant": "#92001e",
-                      "background": "#050508",
-                      "primary-fixed": "#63f7ff",
-                      "on-secondary-container": "#5b000f",
-                      "primary-fixed-dim": "#00dce5",
-                      "accent-cyan": "#00f5ff",
-                      "accent-magenta": "#ff003c",
-                      "accent-yellow": "#ffe600"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "gutter": "24px",
-                      "grid-size": "60px",
-                      "margin-desktop": "80px",
-                      "margin-mobile": "20px"
-              },
-              "fontFamily": {
-                      "code-mono": ["Share Tech Mono"],
-                      "headline-h1": ["Orbitron"],
-                      "body-md": ["Inter"],
-                      "headline-h1-mobile": ["Orbitron"],
-                      "label-caps": ["Share Tech Mono"],
-                      "display-lg": ["Orbitron"]
-              },
-              "fontSize": {
-                      "code-mono": ["14px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "headline-h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "headline-h1-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "400"}],
-                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.1em", "fontWeight": "700"}]
-              }
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Orbitron:wght@400;700;800&amp;family=Share+Tech+Mono&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#e9feff",
+              "on-background": "#e5e1e7",
+              "on-secondary-fixed": "#410008",
+              "on-tertiary-fixed-variant": "#504700",
+              "secondary-container": "#ff525c",
+              "surface-container": "#1f1f23",
+              tertiary: "#fff9ee",
+              "inverse-surface": "#e5e1e7",
+              "on-error": "#690005",
+              "terminal-green": "#00ff41",
+              "on-secondary": "#680012",
+              secondary: "#ffb3b2",
+              "surface-dim": "#131317",
+              error: "#ffb4ab",
+              "ambient-purple": "#7b2ff7",
+              "on-tertiary-container": "#6d6200",
+              "on-surface-variant": "#b9caca",
+              "surface-container-lowest": "#0e0e12",
+              "on-primary": "#003739",
+              "surface-tint": "#00dce5",
+              "surface-variant": "#353439",
+              "surface-bright": "#39393d",
+              "surface-container-highest": "#353439",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed-dim": "#ffb3b2",
+              "primary-container": "#00f5ff",
+              "surface-container-high": "#2a292e",
+              "on-tertiary-fixed": "#201c00",
+              outline: "#849495",
+              surface: "#131317",
+              "on-primary-fixed": "#002021",
+              "surface-bg": "#0d1120",
+              "surface-container-low": "#1b1b1f",
+              "outline-variant": "#3a494a",
+              "tertiary-fixed": "#fde400",
+              "inverse-primary": "#00696e",
+              "on-primary-container": "#006c71",
+              "on-tertiary": "#373100",
+              "error-container": "#93000a",
+              "on-primary-fixed-variant": "#004f53",
+              "tertiary-container": "#f7df00",
+              "tertiary-fixed-dim": "#dec800",
+              "inverse-on-surface": "#303034",
+              "on-surface": "#e5e1e7",
+              "secondary-fixed": "#ffdad8",
+              "grid-line": "rgba(0, 245, 255, 0.03)",
+              "on-secondary-fixed-variant": "#92001e",
+              background: "#050508",
+              "primary-fixed": "#63f7ff",
+              "on-secondary-container": "#5b000f",
+              "primary-fixed-dim": "#00dce5",
+              "accent-cyan": "#00f5ff",
+              "accent-magenta": "#ff003c",
+              "accent-yellow": "#ffe600",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "grid-size": "60px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+            },
+            fontFamily: {
+              "code-mono": ["Share Tech Mono"],
+              "headline-h1": ["Orbitron"],
+              "body-md": ["Inter"],
+              "headline-h1-mobile": ["Orbitron"],
+              "label-caps": ["Share Tech Mono"],
+              "display-lg": ["Orbitron"],
+            },
+            fontSize: {
+              "code-mono": ["14px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-h1": [
+                "32px",
+                { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "700" },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-h1-mobile": [
+                "24px",
+                { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "700" },
+              ],
+              "label-caps": [
+                "12px",
+                { lineHeight: "1.0", letterSpacing: "0.2em", fontWeight: "400" },
+              ],
+              "display-lg": [
+                "48px",
+                { lineHeight: "1.1", letterSpacing: "0.1em", fontWeight: "700" },
+              ],
             },
           },
-        }
+        },
+      };
     </script>
-<style>
-        body {
-            background-color: #050508;
-            background-image: 
-                linear-gradient(to right, rgba(0, 245, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        .scanlines-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(
-                rgba(18, 16, 16, 0) 50%, 
-                rgba(0, 0, 0, 0.1) 50%
-            ), linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.005), rgba(0, 0, 255, 0.01));
-            background-size: 100% 4px, 3px 100%;
-            z-index: 10000;
-            pointer-events: none;
-            opacity: 0.2;
-            animation: scanline-move 10s linear infinite;
-        }
-
-        @keyframes scanline-move {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
-        }
-
-        .glow-cyan { filter: drop-shadow(0 0 8px rgba(0, 245, 255, 0.6)); }
-        .glow-magenta { filter: drop-shadow(0 0 8px rgba(255, 0, 60, 0.6)); }
-        
-        .clipped-corner {
-            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-        }
-
-        .cursor-blink {
-            animation: blink 1s infinite step-end;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-
-        .reveal { 
-            opacity: 0.85; 
-            transform: translateY(12px); 
-            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
-        }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; height: 8px; }
-        ::-webkit-scrollbar-track { background: #0e0e12; }
-        ::-webkit-scrollbar-thumb {
-            background: #00f5ff;
-            border-radius: 0;
-        }
-        ::-webkit-scrollbar-thumb:hover { background: #00dce5; }
-        html { scrollbar-color: #00f5ff #0e0e12; scrollbar-width: thin; }
-
-        /* Text selection */
-        ::selection {
-            background: #00f5ff;
-            color: #050508;
-        }
-        ::-moz-selection {
-            background: #00f5ff;
-            color: #050508;
-        }
-
-        .terminal-header {
-            background: linear-gradient(90deg, #1b1b1f 0%, #0e0e12 100%);
-        }
-
-        .ambient-glow {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(123, 47, 247, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: -1;
-            filter: blur(80px);
-        }
-
-        .hover-lift {
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .hover-lift:hover {
-            transform: translateY(-8px) scale(1.02);
-        }
-        .hover-cyan:hover {
-            box-shadow: 0 10px 30px -10px rgba(0, 245, 255, 0.3);
-            border-color: rgba(0, 245, 255, 0.5) !important;
-        }
-        .hover-magenta:hover {
-            box-shadow: 0 10px 30px -10px rgba(255, 0, 60, 0.3);
-            border-color: rgba(255, 0, 60, 0.5) !important;
-        }
-        .hover-yellow:hover {
-            box-shadow: 0 10px 30px -10px rgba(255, 230, 0, 0.3);
-            border-color: rgba(255, 230, 0, 0.5) !important;
-        }
-
-        @keyframes pulse-border {
-            0%, 100% { border-color: rgba(0, 245, 255, 0.2); box-shadow: 0 0 5px rgba(0, 245, 255, 0.1); }
-            50% { border-color: rgba(0, 245, 255, 0.5); box-shadow: 0 0 15px rgba(0, 245, 255, 0.2); }
-        }
-        .terminal-pulse {
-            animation: pulse-border 4s infinite ease-in-out;
-        }
-
-        @keyframes flicker-glow {
-            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.9; }
-            20%, 22%, 24%, 55% { opacity: 0.4; }
-        }
-        .flicker-overlay {
-            animation: flicker-glow 8s infinite alternate;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal, .hover-lift, .scanlines-overlay, .terminal-pulse, .flicker-overlay, .cursor-blink {
-                animation: none !important;
-                transition: none !important;
-                transform: none !important;
-                opacity: 1 !important;
-            }
-        }
-    </style>
-</head>
-<body class="font-body-md text-on-background bg-background relative">
-<div class="scanlines-overlay"></div>
-<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-accent-cyan/20 h-20 transition-all duration-300 shadow-[0_0_15px_rgba(0,245,255,0.1)]">
-<div class="flex items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-screen-2xl mx-auto justify-center">
-<div class="hidden md:flex items-center gap-8 font-code-mono text-code-mono">
-<a class="transition-all text-on-surface-variant hover:text-accent-cyan transition-colors" href="#home">Home</a>
-<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#about">About</a>
-<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#featured-projects">Projects</a>
-<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#stack">Stack</a>
-<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#workflow">Workflow</a>
-<a class="text-on-surface-variant hover:text-accent-cyan transition-colors" href="#contact">Contact</a>
-</div>
-<button class="md:hidden text-accent-cyan">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<main class="relative pt-20">
-<!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden" id="home">
-<div class="ambient-glow -top-20 -left-20"></div>
-<div class="ambient-glow bottom-0 right-0" style="background: radial-gradient(circle, rgba(0, 245, 255, 0.05) 0%, transparent 70%);"></div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
-<!-- Left Content -->
-<div class="reveal active">
-<h1 class="font-headline-h1 text-[48px] md:text-[80px] leading-tight tracking-tighter mb-4 uppercase typewriter" data-text="NACHOSAG" data-typed="true">NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span></h1>
-<h2 class="font-code-mono text-xl md:text-2xl text-accent-magenta mb-8 uppercase tracking-widest">// SOFTWARE ENGINEER</h2>
-<p class="text-on-surface-variant max-w-xl text-lg mb-12 leading-relaxed font-code-mono">
-                    Building <strong class="text-accent-cyan">backend systems</strong>, <strong class="text-accent-cyan">relational databases</strong>, and <strong class="text-accent-magenta">algorithmic solutions</strong> across multiple languages. Focused on <strong class="text-accent-cyan">correctness</strong>, <strong class="text-accent-cyan">maintainability</strong>, and understanding problems before implementing solutions. <strong class="text-accent-cyan">Architecture-driven</strong>, <strong class="text-accent-cyan">test-backed</strong>, <strong class="text-accent-cyan">production-minded</strong>.
-                </p>
-<div class="flex flex-wrap gap-6">
-<a href="#contact" class="inline-block bg-accent-cyan text-background px-8 py-4 font-code-mono font-bold uppercase clipped-corner hover:brightness-110 hover:scale-105 active:scale-95 transition-all glow-cyan shadow-[0_0_20px_rgba(0,245,255,0.3)]">
-                        Establish Connection
-                    </a>
-<a href="https://github.com/nachosag" target="_blank" class="inline-block border border-accent-cyan/30 text-accent-cyan px-8 py-4 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all">
-                        View Repositories
-                    </a>
-</div>
-</div>
-<!-- Right Terminal -->
-<div class="reveal delay-[300ms] active">
-<div class="bg-surface-container-lowest border border-accent-cyan/20 rounded-lg overflow-hidden shadow-2xl relative terminal-pulse">
-<div class="terminal-header h-10 px-4 flex items-center justify-between border-b border-accent-cyan/10">
-<div class="flex gap-2">
-<div class="w-3 h-3 rounded-full bg-error"></div>
-<div class="w-3 h-3 rounded-full bg-accent-yellow"></div>
-<div class="w-3 h-3 rounded-full bg-terminal-green"></div>
-</div>
-<span class="font-code-mono text-xs opacity-50 uppercase tracking-widest">system_status.sh</span>
-</div>
-<div class="p-8 font-code-mono text-sm md:text-base leading-relaxed text-terminal-green/90 flicker-overlay">
-<div class="flex items-center gap-4 mb-4">
-<span class="text-accent-cyan">os:</span>
-<span class="">Ubuntu 24.04 LTS</span>
-</div>
-<div class="flex items-center gap-4 mb-4">
-<span class="text-accent-cyan">shell:</span>
-<span class="">bash</span>
-</div>
-<div class="flex items-center gap-4 mb-4">
-<span class="text-accent-cyan">languages:</span>
-<span class="text-accent-magenta">[ "TypeScript", "Python", "Go" ]</span>
-</div>
-<div class="flex items-center gap-4 mb-4">
-<span class="text-accent-cyan">location:</span>
-<span class="">Buenos Aires, AR</span>
-</div>
-<div class="mt-8 flex gap-2">
-<span class="text-accent-cyan">$</span>
-<span class="">fetch --profile developer_identity</span>
-</div>
-<div class="mt-2 flex gap-2">
-<span class="text-accent-cyan">&gt;</span>
-<span class="">READY_TO_INITIALIZE...</span>
-</div>
-<div class="mt-2 flex items-center">
-<span class="text-accent-cyan">&gt;</span>
-<span class="ml-2 w-2 h-5 bg-accent-cyan cursor-blink"></span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto" id="about">
-<div class="reveal flex flex-col mb-16">
-<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// ABOUT</span>
-<h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">CORE_MINDSET</h2>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-<div class="space-y-8 reveal delay-[100ms]">
-<p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-cyan/20 pl-8 font-code-mono">
-                        I believe in understanding what happens <strong class="text-accent-cyan">under the hood</strong> — not just wiring libraries together. <strong class="text-accent-cyan">Software architecture</strong>, <strong class="text-accent-cyan">data modeling</strong>, and <strong class="text-accent-cyan">clean design patterns</strong> come before code. If you don't understand <em>why</em>, the implementation doesn't matter.
-                    </p>
-<p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-magenta/20 pl-8 font-code-mono">
-                        <strong class="text-accent-cyan">System design</strong>, <strong class="text-accent-cyan">distributed databases</strong>, <strong class="text-accent-magenta">graph algorithms</strong>, and the mechanics of making things <strong class="text-accent-cyan">fast</strong>, <strong class="text-accent-cyan">reliable</strong>, and <strong class="text-accent-cyan">maintainable</strong>. From <strong class="text-accent-cyan">REST APIs</strong> to <strong class="text-accent-magenta">NP-Hard optimization</strong> — my work lives at the intersection of <strong class="text-accent-cyan">clean architecture</strong> and <strong class="text-accent-cyan">pragmatic engineering</strong>.
-                    </p>
-<p class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-yellow/20 pl-8 font-code-mono">
-                        I bring <strong class="text-accent-cyan">architectural clarity</strong> to teams that need it. Whether it's enforcing <strong class="text-accent-cyan">layered separation of concerns</strong>, designing <strong class="text-accent-magenta">dependency injection</strong> that enables true <strong class="text-accent-cyan">test isolation</strong>, or shipping <strong class="text-accent-cyan">serverless platforms</strong> at <strong class="text-accent-magenta">zero operational cost</strong> — my contributions reduce <strong class="text-accent-cyan">complexity</strong> and increase <strong class="text-accent-cyan">velocity</strong>.
-                    </p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-[200ms]">
-<div class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift hover-cyan border border-transparent">
-<span class="font-code-mono text-xs text-accent-cyan mb-2 block">// SYST_ARCH</span>
-<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">SCALABLE_CORE</h4>
-<p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">Modular layered systems</strong> using controllers → services → repositories patterns. <strong class="text-accent-cyan">Clean, Hexagonal, and Screaming Architecture</strong>. <strong class="text-accent-magenta">Serverless edge computing</strong> and <strong class="text-accent-cyan">distributed system design</strong>.</p>
-</div>
-<div class="bg-surface-container-low p-6 border-l-4 border-accent-magenta hover-lift hover-magenta border border-transparent">
-<span class="font-code-mono text-xs text-accent-magenta mb-2 block">// PERF_OPT</span>
-<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">LATENCY_CONTROL</h4>
-<p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">End-to-end async I/O</strong> from HTTP to database layer. <strong class="text-accent-magenta">Optimized graph algorithms</strong> with <strong class="text-accent-cyan">~40% reduction</strong> in execution time through tree pruning. <strong class="text-accent-cyan">Low-level systems</strong> understanding — pipelining, memory management, SIMD.</p>
-</div>
-<div class="bg-surface-container-low p-6 border-l-4 border-accent-yellow hover-lift hover-yellow border border-transparent">
-<span class="font-code-mono text-xs text-accent-yellow mb-2 block">// CODE_QUAL</span>
-<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">ROBUST_LOGIC</h4>
-<p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">Full test coverage</strong> across every layer — unit, integration, and stress testing. <strong class="text-accent-cyan">Dependency override</strong> for isolated database tests. <strong class="text-accent-cyan">Vitest</strong>, <strong class="text-accent-cyan">Pytest</strong>, <strong class="text-accent-cyan">JUnit</strong>. <strong class="text-accent-magenta">Mock injection</strong> and <strong class="text-accent-cyan">sandboxed edge runtime</strong> environments.</p>
-</div>
-<div class="bg-surface-container-low p-6 border-l-4 border-primary hover-lift hover-cyan border border-transparent">
-<span class="font-code-mono text-xs text-primary mb-2 block">// MENTOR_X</span>
-<h4 class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3">TECH_LEADERSHIP</h4>
-<p class="text-xs text-on-surface-variant leading-relaxed"><strong class="text-accent-cyan">Technical mentorship</strong> guiding team members on <strong class="text-accent-cyan">Python</strong>, <strong class="text-accent-cyan">FastAPI</strong>, and backend ecosystem fundamentals. Documented <strong class="text-accent-cyan">patterns</strong> and <strong class="text-accent-cyan">architecture decisions</strong> to raise <strong class="text-accent-magenta">team velocity</strong> across the board.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Featured Projects -->
-<section class="py-32 bg-surface-container-lowest relative overflow-hidden" id="featured-projects">
-<div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
-<div class="reveal flex flex-col mb-16">
-<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// DEPLOYED_ASSETS</span>
-<h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">PROJECT_PORTFOLIO</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- SIGRH+ -->
-<div class="reveal group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col">
-<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-6">
-<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_001</span>
-<span class="material-symbols-outlined text-accent-cyan text-sm">terminal</span>
-</div>
-<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">SIGRH+</h3>
-<div class="flex flex-wrap gap-2 mb-6">
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Python</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">FastAPI</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">PostgreSQL</span>
-</div>
-<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
-<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
-<p class="text-xs text-on-surface-variant leading-snug">ERP/CRM for HR with <strong class="text-accent-magenta">integrated AI</strong>. <strong class="text-accent-cyan">NLP-based CV filtering</strong> reducing manual screening from <strong class="text-accent-cyan">hours to seconds</strong> per batch. <strong class="text-accent-cyan">Facial recognition</strong> attendance tracking. <strong class="text-accent-cyan">LLM chatbot</strong> via Ollama — <strong class="text-accent-magenta">fully offline</strong>, <strong class="text-accent-magenta">zero external API dependency</strong>.</p>
-</div>
-<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto" href="https://github.com/nachosag/sigrh" target="_blank">
-                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- CDM Calculator -->
-<div class="reveal delay-[100ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col">
-<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-6">
-<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_002</span>
-<span class="material-symbols-outlined text-accent-cyan text-sm">memory</span>
-</div>
-<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">CDM CALCULATOR</h3>
-<div class="flex flex-wrap gap-2 mb-6">
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Java</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Backtracking</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Graph Theory</span>
-</div>
-<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
-<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
-<p class="text-xs text-on-surface-variant leading-snug"><strong class="text-accent-magenta">NP-Hard Minimum Dominating Set</strong> solver. <strong class="text-accent-cyan">Aggressive recursion-tree pruning</strong> to process dense graph instances that previously caused <strong class="text-accent-magenta">memory overflow</strong>. <strong class="text-accent-cyan">~40% execution time improvement</strong>, interactive graph editor in <strong class="text-accent-cyan">Java AWT</strong>.</p>
-</div>
-<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto" href="https://github.com/nachosag/cdm-calculator" target="_blank">
-                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- NotebookLM Gallery -->
-<div class="reveal delay-[200ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col">
-<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-6">
-<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_003</span>
-<span class="material-symbols-outlined text-accent-cyan text-sm">cloud</span>
-</div>
-<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">NOTEBOOKLM GALLERY</h3>
-<div class="flex flex-wrap gap-2 mb-6">
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Cloudflare Workers</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">D1</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">R2</span>
-</div>
-<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
-<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
-<p class="text-xs text-on-surface-variant leading-snug"><strong class="text-accent-magenta">Fully serverless</strong> community platform on <strong class="text-accent-cyan">Cloudflare's free tier</strong>. <strong class="text-accent-cyan">Turnstile</strong> spam protection, <strong class="text-accent-cyan">IP-based rate limiting</strong>, <strong class="text-accent-cyan">FTS5 search</strong>, and <strong class="text-accent-cyan">&lt;150ms</strong> global page loads. <strong class="text-accent-magenta">Zero fixed infrastructure cost</strong>. <strong class="text-accent-cyan">100% test coverage</strong> on critical API endpoints.</p>
-</div>
-<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto" href="https://github.com/nachosag/notebooklm-gallery" target="_blank">
-                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- MakerDAO Job Monitor -->
-<div class="reveal delay-[300ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col">
-<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="p-6 flex flex-col flex-1">
-<div class="flex justify-between items-start mb-6">
-<span class="font-code-mono text-xs text-on-surface-variant tracking-widest">// PROJECT_004</span>
-<span class="material-symbols-outlined text-accent-cyan text-sm">database</span>
-</div>
-<h3 class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase">MAKERDAO MONITOR</h3>
-<div class="flex flex-wrap gap-2 mb-6">
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">TypeScript</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">ethers.js</span>
-<span class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan">Node.js</span>
-</div>
-<div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
-<p class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1">Challenge_Report:</p>
-<p class="text-xs text-on-surface-variant leading-snug"><strong class="text-accent-magenta">On-chain Ethereum</strong> monitoring for <strong class="text-accent-cyan">MakerDAO Sequencer</strong> contract. Direct <strong class="text-accent-cyan">ABI interaction</strong> via <strong class="text-accent-cyan">ethers.js</strong>, polling loop scanning <strong class="text-accent-cyan">5,000+ blocks</strong> on startup. <strong class="text-accent-cyan">Multi-channel alerting</strong> (Discord, Slack) behind a shared interface. <strong class="text-accent-magenta">Full dependency injection</strong> across every layer.</p>
-</div>
-<a class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto" href="https://github.com/nachosag/wonderland-challenge" target="_blank">
-                            ACCESS_SOURCE <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Project Explorer -->
-<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto" id="projects">
-<div class="reveal flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
-<div>
-<span class="font-code-mono text-accent-cyan tracking-widest mb-2 uppercase">// REPOSITORY_INDEX</span>
-<h2 class="font-headline-h1 text-3xl text-primary uppercase">PROJECT_EXPLORER</h2>
-</div>
-<div class="flex flex-wrap gap-4 font-code-mono text-[10px] uppercase">
-<button class="px-4 py-2 bg-accent-magenta text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active" onclick="filterProjects('all')">ALL</button>
-<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('backend')">BACKEND</button>
-<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('algorithms')">ALGORITHMS</button>
-<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('serverless')">CLOUD</button>
-<button class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn" onclick="filterProjects('fullstack')">UI/UX</button>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="explorer-grid">
-<!-- sigrh -->
-<div class="reveal bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/sigrh" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">sigrh</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
-</div>
-<!-- cdm-calculator -->
-<div class="reveal delay-[50ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="algorithms">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/cdm-calculator" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">cdm-calculator</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
-</div>
-<!-- human-clustering -->
-<div class="reveal delay-[100ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="algorithms">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/human-clustering" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">human-clustering</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
-</div>
-<!-- lights-out-game -->
-<div class="reveal delay-[150ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/lights-out-game" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">lights-out-game</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">games</span>
-</div>
-<!-- wonderland-challenge -->
-<div class="reveal delay-[200ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/wonderland-challenge" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">wonderland-challenge</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
-</div>
-<!-- siu-guarani-clone -->
-<div class="reveal delay-[250ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/siu-guarani-clone" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">siu-guarani-clone</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">academic</span>
-</div>
-<!-- notebooklm-gallery -->
-<div class="reveal delay-[300ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="serverless">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/notebooklm-gallery" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">notebooklm-gallery</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">serverless</span>
-</div>
-<!-- async-api -->
-<div class="reveal delay-[350ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/async-api" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">async-api</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
-</div>
-<!-- github-activity-cli -->
-<div class="reveal delay-[400ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="fullstack">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/github-activity-cli" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">github-activity-cli</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">cli</span>
-</div>
-<!-- notes-app -->
-<div class="reveal delay-[450ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="fullstack">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/notes-app" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">notes-app</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">fullstack</span>
-</div>
-<!-- auth-flow -->
-<div class="reveal delay-[500ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift" data-cat="backend">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors">folder</span>
-<a href="https://github.com/nachosag/auth-flow" target="_blank" class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors">auth-flow</a>
-</div>
-<span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
-</div>
-</div>
-</section>
-<!-- Tech Stack -->
-<section class="py-32 bg-background relative border-y border-accent-cyan/5" id="stack">
-<div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
-<div class="reveal flex flex-col mb-16 text-center">
-<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// CAPABILITY_MATRIX</span>
-<h2 class="font-headline-h1 text-4xl text-primary uppercase">TECH_STACK</h2>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12">
-<div class="reveal hover-lift hover-cyan p-2 border border-transparent rounded transition-all">
-<h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">LANGUAGES</h4>
-<div class="flex flex-col gap-4">
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">TypeScript</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Python</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Java</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Go</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">JavaScript</span>
-</div>
-</div>
-<div class="reveal delay-[100ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all">
-<h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">FRONTEND</h4>
-<div class="flex flex-col gap-4">
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">React</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Angular</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Zustand</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Vite</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Vanilla CSS</span>
-</div>
-</div>
-<div class="reveal delay-[200ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all">
-<h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">BACKEND</h4>
-<div class="flex flex-col gap-4">
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">FastAPI</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Express</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Nest</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">SQLModel</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">SQLAlchemy</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare Workers</span>
-</div>
-</div>
-<div class="reveal delay-[300ms] hover-lift hover-cyan p-2 border border-transparent rounded transition-all">
-<h4 class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase">INFRA</h4>
-<div class="flex flex-col gap-4">
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Docker</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Docker Compose</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare Pages</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Wrangler CLI</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">GitHub Actions</span>
-</div>
-</div>
-<div class="reveal delay-[400ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all">
-<h4 class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase">DATA</h4>
-<div class="flex flex-col gap-4">
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">PostgreSQL</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">MySQL</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">SQLite</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">MongoDB</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cassandra</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Redis</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Cloudflare D1 / R2</span>
-</div>
-</div>
-<div class="reveal delay-[500ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all">
-<h4 class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase">PIPELINE</h4>
-<div class="flex flex-col gap-4">
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Git</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">GitHub Actions</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Pytest</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Vitest</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">Playwright</span>
-<span class="text-sm font-code-mono text-on-surface-variant uppercase">oxlint</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Workflow Section -->
-<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden" id="workflow">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<!-- Terminal Pipeline Diagram -->
-<div class="reveal">
-<div class="bg-surface-container-lowest border border-accent-magenta/20 rounded-lg overflow-hidden shadow-2xl terminal-pulse">
-<div class="terminal-header h-10 px-4 flex items-center justify-between border-b border-accent-magenta/10">
-<div class="flex gap-2">
-<div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
-<div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
-<div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
-</div>
-<span class="font-code-mono text-xs opacity-50 uppercase tracking-widest">pipeline_schema.ascii</span>
-</div>
-<div class="p-8 flex flex-col gap-3 font-code-mono text-[11px] md:text-sm leading-relaxed flicker-overlay">
-<div class="flex items-center gap-3 px-2 py-2 rounded border border-accent-cyan/20 bg-accent-cyan/5">
-  <span class="text-accent-magenta font-bold uppercase tracking-widest">GENTLE-AI SDD PIPELINE</span>
-</div>
-
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-cyan font-bold w-24 shrink-0">EXPLORE</span>
-  <span class="text-accent-cyan">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Investigate &amp; clarify requirements</span>
-</div>
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-cyan font-bold w-24 shrink-0">PROPOSE</span>
-  <span class="text-accent-cyan">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Create change proposal with intent &amp; scope</span>
-</div>
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-yellow font-bold w-24 shrink-0">SPEC</span>
-  <span class="text-accent-yellow">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Delta specs: requirements, scenarios, acceptance</span>
-</div>
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-yellow font-bold w-24 shrink-0">DESIGN</span>
-  <span class="text-accent-yellow">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Technical design, architecture, data models, APIs</span>
-</div>
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-yellow font-bold w-24 shrink-0">TASKS</span>
-  <span class="text-accent-yellow">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Break into reviewable implementation units</span>
-</div>
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-magenta font-bold w-24 shrink-0">APPLY</span>
-  <span class="text-accent-magenta">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Implement with work-unit commits, TDD when supported</span>
-</div>
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-magenta font-bold w-24 shrink-0">VERIFY</span>
-  <span class="text-accent-magenta">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Run tests, prove spec &amp; design compliance</span>
-</div>
-<div class="flex items-center gap-3 px-2">
-  <span class="w-6"></span>
-  <span class="text-accent-magenta font-bold w-24 shrink-0">ARCHIVE</span>
-  <span class="text-accent-magenta">→</span>
-  <span class="text-on-surface-variant/60 flex-1">Sync delta specs, close change</span>
-</div>
-
-<div class="flex items-center gap-2 px-2 py-2 mt-4 rounded border border-accent-magenta/20 bg-accent-magenta/5">
-  <span class="text-accent-magenta font-bold">QUALITY GATES:</span>
-  <span class="text-accent-cyan">TDD</span>
-  <span class="text-on-surface-variant/60">·</span>
-  <span class="text-accent-cyan">Fresh Reviews</span>
-  <span class="text-on-surface-variant/60">·</span>
-  <span class="text-accent-cyan">Judgment Day</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Pillar Cards -->
-<div class="reveal delay-[200ms]">
-<span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase">// DEVELOPMENT_METHODOLOGY</span>
-<h2 class="font-headline-h1 text-4xl text-primary mb-12 uppercase">ENGINEERING_LIFECYCLE</h2>
-<div class="space-y-6">
-<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
-<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">01. REQUIREMENT_ANALYSIS</h4>
-<p class="text-sm text-on-surface-variant">Breaking down stakeholder needs into <strong class="text-accent-cyan">clear, testable contracts</strong>. <strong class="text-accent-magenta">Spec-driven development</strong> ensures every feature has <strong class="text-accent-cyan">defined success criteria</strong> before a single line of code is written.</p>
-</div>
-<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
-<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">02. ARCHITECTURAL_BLUEPRINT</h4>
-<p class="text-sm text-on-surface-variant">Designing <strong class="text-accent-cyan">modular systems</strong> with <strong class="text-accent-cyan">clean separation of concerns</strong> — controllers, services, repositories. <strong class="text-accent-magenta">Dependency injection</strong> enables <strong class="text-accent-cyan">true test isolation</strong> and future flexibility without rewiring.</p>
-</div>
-<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
-<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">03. ITERATIVE_DEVELOPMENT</h4>
-<p class="text-sm text-on-surface-variant"><strong class="text-accent-cyan">Spec-driven development pipeline</strong>: <strong class="text-accent-magenta">explore → propose → spec → design → tasks → apply → verify → archive</strong>. Each phase <strong class="text-accent-cyan">gates quality</strong> and catches drift before it compounds downstream.</p>
-</div>
-<div class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift">
-<h4 class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase">04. QUALITY_ASSURANCE</h4>
-<p class="text-sm text-on-surface-variant"><strong class="text-accent-cyan">Red-green-refactor TDD</strong> cycle when the stack supports it. <strong class="text-accent-cyan">Fresh-context reviews</strong> catching drift. <strong class="text-accent-magenta">Judgment Day adversarial verification</strong> — blind dual review, fix, re-judge. No rubber-stamp approvals.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto text-center border-t border-accent-cyan/5" id="contact">
-<div class="reveal max-w-2xl mx-auto">
-<span class="font-code-mono text-accent-magenta tracking-widest mb-4 uppercase block">// TRANSMISSION_READY</span>
-<h2 class="font-headline-h1 text-5xl md:text-6xl text-primary mb-12 uppercase glow-magenta flicker-overlay">ESTABLISH CONNECTION</h2>
-<p class="text-on-surface-variant mb-16 text-lg font-code-mono">
-                Open to <strong class="text-accent-cyan">remote backend engineering roles</strong> and <strong class="text-accent-magenta">interesting technical challenges</strong>. Let's talk about <strong class="text-accent-cyan">systems</strong>, <strong class="text-accent-cyan">architecture</strong>, or <strong class="text-accent-cyan">problems worth solving</strong>.
+  </head>
+  <body class="font-body-md text-on-background bg-background relative">
+    <div class="scanlines-overlay"></div>
+    <nav
+      class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-accent-cyan/20 h-20 transition-all duration-300 shadow-[0_0_15px_rgba(0,245,255,0.1)]"
+    >
+      <div
+        class="flex items-center px-margin-mobile md:px-margin-desktop h-full w-full max-w-screen-2xl mx-auto justify-center"
+      >
+        <div class="hidden md:flex items-center gap-8 font-code-mono text-code-mono">
+          <a
+            class="transition-all text-on-surface-variant hover:text-accent-cyan transition-colors"
+            href="#home"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-accent-cyan transition-colors"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-accent-cyan transition-colors"
+            href="#featured-projects"
+            >Projects</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-accent-cyan transition-colors"
+            href="#stack"
+            >Stack</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-accent-cyan transition-colors"
+            href="#workflow"
+            >Workflow</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-accent-cyan transition-colors"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <button class="md:hidden text-accent-cyan">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+    <main class="relative pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden"
+        id="home"
+      >
+        <div class="ambient-glow -top-20 -left-20"></div>
+        <div
+          class="ambient-glow bottom-0 right-0"
+          style="
+            background: radial-gradient(
+              circle,
+              rgba(0, 245, 255, 0.05) 0%,
+              transparent 70%
+            );
+          "
+        ></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+          <!-- Left Content -->
+          <div class="reveal active">
+            <h1
+              class="font-headline-h1 text-[48px] md:text-[80px] leading-tight tracking-tighter mb-4 uppercase typewriter"
+              data-text="NACHOSAG"
+              data-typed="true"
+            >
+              NACHO<span
+                class="text-accent-cyan"
+                style="
+                  text-shadow:
+                    rgba(0, 245, 255, 0.5) 0px 0px 10px,
+                    rgba(0, 245, 255, 0.3) 0px 0px 20px;
+                "
+                >SAG</span
+              >
+            </h1>
+            <h2
+              class="font-code-mono text-xl md:text-2xl text-accent-magenta mb-8 uppercase tracking-widest"
+            >
+              // SOFTWARE ENGINEER
+            </h2>
+            <p
+              class="text-on-surface-variant max-w-xl text-lg mb-12 leading-relaxed font-code-mono"
+            >
+              Building <strong class="text-accent-cyan">backend systems</strong>,
+              <strong class="text-accent-cyan">relational databases</strong>, and
+              <strong class="text-accent-magenta">algorithmic solutions</strong> across
+              multiple languages. Focused on
+              <strong class="text-accent-cyan">correctness</strong>,
+              <strong class="text-accent-cyan">maintainability</strong>, and understanding
+              problems before implementing solutions.
+              <strong class="text-accent-cyan">Architecture-driven</strong>,
+              <strong class="text-accent-cyan">test-backed</strong>,
+              <strong class="text-accent-cyan">production-minded</strong>.
             </p>
-<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-<a class="w-full md:w-auto bg-accent-cyan text-background px-10 py-5 font-code-mono font-bold uppercase clipped-corner glow-cyan hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(0,245,255,0.2)] hover:shadow-[0_0_40px_rgba(0,245,255,0.4)]" href="mailto:borlenghi.work@gmail.com">
-                    BORLENGHI.WORK@GMAIL.COM
+            <div class="flex flex-wrap gap-6">
+              <a
+                href="#contact"
+                class="inline-block bg-accent-cyan text-background px-8 py-4 font-code-mono font-bold uppercase clipped-corner hover:brightness-110 hover:scale-105 active:scale-95 transition-all glow-cyan shadow-[0_0_20px_rgba(0,245,255,0.3)]"
+              >
+                Establish Connection
+              </a>
+              <a
+                href="https://github.com/nachosag"
+                target="_blank"
+                class="inline-block border border-accent-cyan/30 text-accent-cyan px-8 py-4 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all"
+              >
+                View Repositories
+              </a>
+            </div>
+          </div>
+          <!-- Right Terminal -->
+          <div class="reveal delay-[300ms] active">
+            <div
+              class="bg-surface-container-lowest border border-accent-cyan/20 rounded-lg overflow-hidden shadow-2xl relative terminal-pulse"
+            >
+              <div
+                class="terminal-header h-10 px-4 flex items-center justify-between border-b border-accent-cyan/10"
+              >
+                <div class="flex gap-2">
+                  <div class="w-3 h-3 rounded-full bg-error"></div>
+                  <div class="w-3 h-3 rounded-full bg-accent-yellow"></div>
+                  <div class="w-3 h-3 rounded-full bg-terminal-green"></div>
+                </div>
+                <span class="font-code-mono text-xs opacity-50 uppercase tracking-widest"
+                  >system_status.sh</span
+                >
+              </div>
+              <div
+                class="p-8 font-code-mono text-sm md:text-base leading-relaxed text-terminal-green/90 flicker-overlay"
+              >
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-accent-cyan">os:</span>
+                  <span class="">Ubuntu 24.04 LTS</span>
+                </div>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-accent-cyan">shell:</span>
+                  <span class="">bash</span>
+                </div>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-accent-cyan">languages:</span>
+                  <span class="text-accent-magenta"
+                    >[ "TypeScript", "Python", "Go" ]</span
+                  >
+                </div>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-accent-cyan">location:</span>
+                  <span class="">Buenos Aires, AR</span>
+                </div>
+                <div class="mt-8 flex gap-2">
+                  <span class="text-accent-cyan">$</span>
+                  <span class="">fetch --profile developer_identity</span>
+                </div>
+                <div class="mt-2 flex gap-2">
+                  <span class="text-accent-cyan">&gt;</span>
+                  <span class="">READY_TO_INITIALIZE...</span>
+                </div>
+                <div class="mt-2 flex items-center">
+                  <span class="text-accent-cyan">&gt;</span>
+                  <span class="ml-2 w-2 h-5 bg-accent-cyan cursor-blink"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section
+        class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto"
+        id="about"
+      >
+        <div class="reveal flex flex-col mb-16">
+          <span class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase"
+            >// ABOUT</span
+          >
+          <h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">
+            CORE_MINDSET
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div class="space-y-8 reveal delay-[100ms]">
+            <p
+              class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-cyan/20 pl-8 font-code-mono"
+            >
+              I believe in understanding what happens
+              <strong class="text-accent-cyan">under the hood</strong> — not just wiring
+              libraries together.
+              <strong class="text-accent-cyan">Software architecture</strong>,
+              <strong class="text-accent-cyan">data modeling</strong>, and
+              <strong class="text-accent-cyan">clean design patterns</strong> come before
+              code. If you don't understand <em>why</em>, the implementation doesn't
+              matter.
+            </p>
+            <p
+              class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-magenta/20 pl-8 font-code-mono"
+            >
+              <strong class="text-accent-cyan">System design</strong>,
+              <strong class="text-accent-cyan">distributed databases</strong>,
+              <strong class="text-accent-magenta">graph algorithms</strong>, and the
+              mechanics of making things <strong class="text-accent-cyan">fast</strong>,
+              <strong class="text-accent-cyan">reliable</strong>, and
+              <strong class="text-accent-cyan">maintainable</strong>. From
+              <strong class="text-accent-cyan">REST APIs</strong> to
+              <strong class="text-accent-magenta">NP-Hard optimization</strong> — my work
+              lives at the intersection of
+              <strong class="text-accent-cyan">clean architecture</strong> and
+              <strong class="text-accent-cyan">pragmatic engineering</strong>.
+            </p>
+            <p
+              class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-accent-yellow/20 pl-8 font-code-mono"
+            >
+              I bring <strong class="text-accent-cyan">architectural clarity</strong> to
+              teams that need it. Whether it's enforcing
+              <strong class="text-accent-cyan">layered separation of concerns</strong>,
+              designing
+              <strong class="text-accent-magenta">dependency injection</strong> that
+              enables true <strong class="text-accent-cyan">test isolation</strong>, or
+              shipping <strong class="text-accent-cyan">serverless platforms</strong> at
+              <strong class="text-accent-magenta">zero operational cost</strong> — my
+              contributions reduce
+              <strong class="text-accent-cyan">complexity</strong> and increase
+              <strong class="text-accent-cyan">velocity</strong>.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal delay-[200ms]">
+            <div
+              class="bg-surface-container-low p-6 border-l-4 border-accent-cyan hover-lift hover-cyan border border-transparent"
+            >
+              <span class="font-code-mono text-xs text-accent-cyan mb-2 block"
+                >// SYST_ARCH</span
+              >
+              <h4
+                class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3"
+              >
+                SCALABLE_CORE
+              </h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                <strong class="text-accent-cyan">Modular layered systems</strong> using
+                controllers → services → repositories patterns.
+                <strong class="text-accent-cyan"
+                  >Clean, Hexagonal, and Screaming Architecture</strong
+                >.
+                <strong class="text-accent-magenta">Serverless edge computing</strong> and
+                <strong class="text-accent-cyan">distributed system design</strong>.
+              </p>
+            </div>
+            <div
+              class="bg-surface-container-low p-6 border-l-4 border-accent-magenta hover-lift hover-magenta border border-transparent"
+            >
+              <span class="font-code-mono text-xs text-accent-magenta mb-2 block"
+                >// PERF_OPT</span
+              >
+              <h4
+                class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3"
+              >
+                LATENCY_CONTROL
+              </h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                <strong class="text-accent-cyan">End-to-end async I/O</strong> from HTTP
+                to database layer.
+                <strong class="text-accent-magenta">Optimized graph algorithms</strong>
+                with <strong class="text-accent-cyan">~40% reduction</strong> in execution
+                time through tree pruning.
+                <strong class="text-accent-cyan">Low-level systems</strong> understanding
+                — pipelining, memory management, SIMD.
+              </p>
+            </div>
+            <div
+              class="bg-surface-container-low p-6 border-l-4 border-accent-yellow hover-lift hover-yellow border border-transparent"
+            >
+              <span class="font-code-mono text-xs text-accent-yellow mb-2 block"
+                >// CODE_QUAL</span
+              >
+              <h4
+                class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3"
+              >
+                ROBUST_LOGIC
+              </h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                <strong class="text-accent-cyan">Full test coverage</strong> across every
+                layer — unit, integration, and stress testing.
+                <strong class="text-accent-cyan">Dependency override</strong> for isolated
+                database tests. <strong class="text-accent-cyan">Vitest</strong>,
+                <strong class="text-accent-cyan">Pytest</strong>,
+                <strong class="text-accent-cyan">JUnit</strong>.
+                <strong class="text-accent-magenta">Mock injection</strong> and
+                <strong class="text-accent-cyan">sandboxed edge runtime</strong>
+                environments.
+              </p>
+            </div>
+            <div
+              class="bg-surface-container-low p-6 border-l-4 border-primary hover-lift hover-cyan border border-transparent"
+            >
+              <span class="font-code-mono text-xs text-primary mb-2 block"
+                >// MENTOR_X</span
+              >
+              <h4
+                class="font-headline-h1 text-sm tracking-widest uppercase text-on-surface mb-3"
+              >
+                TECH_LEADERSHIP
+              </h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                <strong class="text-accent-cyan">Technical mentorship</strong> guiding
+                team members on <strong class="text-accent-cyan">Python</strong>,
+                <strong class="text-accent-cyan">FastAPI</strong>, and backend ecosystem
+                fundamentals. Documented
+                <strong class="text-accent-cyan">patterns</strong> and
+                <strong class="text-accent-cyan">architecture decisions</strong> to raise
+                <strong class="text-accent-magenta">team velocity</strong> across the
+                board.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Projects -->
+      <section
+        class="py-32 bg-surface-container-lowest relative overflow-hidden"
+        id="featured-projects"
+      >
+        <div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+          <div class="reveal flex flex-col mb-16">
+            <span
+              class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase"
+              >// DEPLOYED_ASSETS</span
+            >
+            <h2 class="font-headline-h1 text-4xl md:text-5xl text-primary uppercase">
+              PROJECT_PORTFOLIO
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- SIGRH+ -->
+            <div
+              class="reveal group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
+            >
+              <div
+                class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex justify-between items-start mb-6">
+                  <span
+                    class="font-code-mono text-xs text-on-surface-variant tracking-widest"
+                    >// PROJECT_001</span
+                  >
+                  <span class="material-symbols-outlined text-accent-cyan text-sm"
+                    >terminal</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  SIGRH+
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >Python</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >FastAPI</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >PostgreSQL</span
+                  >
+                </div>
+                <div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+                  <p
+                    class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1"
+                  >
+                    Challenge_Report:
+                  </p>
+                  <p class="text-xs text-on-surface-variant leading-snug">
+                    ERP/CRM for HR with
+                    <strong class="text-accent-magenta">integrated AI</strong>.
+                    <strong class="text-accent-cyan">NLP-based CV filtering</strong>
+                    reducing manual screening from
+                    <strong class="text-accent-cyan">hours to seconds</strong> per batch.
+                    <strong class="text-accent-cyan">Facial recognition</strong>
+                    attendance tracking.
+                    <strong class="text-accent-cyan">LLM chatbot</strong> via Ollama —
+                    <strong class="text-accent-magenta">fully offline</strong>,
+                    <strong class="text-accent-magenta"
+                      >zero external API dependency</strong
+                    >.
+                  </p>
+                </div>
+                <a
+                  class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
+                  href="https://github.com/nachosag/sigrh"
+                  target="_blank"
+                >
+                  ACCESS_SOURCE
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
-<a class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3" href="https://github.com/nachosag" target="_blank">
-<span class="material-symbols-outlined">link</span> GITHUB
+              </div>
+            </div>
+            <!-- CDM Calculator -->
+            <div
+              class="reveal delay-[100ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
+            >
+              <div
+                class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex justify-between items-start mb-6">
+                  <span
+                    class="font-code-mono text-xs text-on-surface-variant tracking-widest"
+                    >// PROJECT_002</span
+                  >
+                  <span class="material-symbols-outlined text-accent-cyan text-sm"
+                    >memory</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  CDM CALCULATOR
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >Java</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >Backtracking</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >Graph Theory</span
+                  >
+                </div>
+                <div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+                  <p
+                    class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1"
+                  >
+                    Challenge_Report:
+                  </p>
+                  <p class="text-xs text-on-surface-variant leading-snug">
+                    <strong class="text-accent-magenta"
+                      >NP-Hard Minimum Dominating Set</strong
+                    >
+                    solver.
+                    <strong class="text-accent-cyan"
+                      >Aggressive recursion-tree pruning</strong
+                    >
+                    to process dense graph instances that previously caused
+                    <strong class="text-accent-magenta">memory overflow</strong>.
+                    <strong class="text-accent-cyan"
+                      >~40% execution time improvement</strong
+                    >, interactive graph editor in
+                    <strong class="text-accent-cyan">Java AWT</strong>.
+                  </p>
+                </div>
+                <a
+                  class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
+                  href="https://github.com/nachosag/cdm-calculator"
+                  target="_blank"
+                >
+                  ACCESS_SOURCE
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
-<a class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3" href="https://linkedin.com/in/ignacio-borlenghi-74b720221" target="_blank">
-<span class="material-symbols-outlined">badge</span> LINKEDIN
+              </div>
+            </div>
+            <!-- NotebookLM Gallery -->
+            <div
+              class="reveal delay-[200ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
+            >
+              <div
+                class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex justify-between items-start mb-6">
+                  <span
+                    class="font-code-mono text-xs text-on-surface-variant tracking-widest"
+                    >// PROJECT_003</span
+                  >
+                  <span class="material-symbols-outlined text-accent-cyan text-sm"
+                    >cloud</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  NOTEBOOKLM GALLERY
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >Cloudflare Workers</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >D1</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >R2</span
+                  >
+                </div>
+                <div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+                  <p
+                    class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1"
+                  >
+                    Challenge_Report:
+                  </p>
+                  <p class="text-xs text-on-surface-variant leading-snug">
+                    <strong class="text-accent-magenta">Fully serverless</strong>
+                    community platform on
+                    <strong class="text-accent-cyan">Cloudflare's free tier</strong>.
+                    <strong class="text-accent-cyan">Turnstile</strong> spam protection,
+                    <strong class="text-accent-cyan">IP-based rate limiting</strong>,
+                    <strong class="text-accent-cyan">FTS5 search</strong>, and
+                    <strong class="text-accent-cyan">&lt;150ms</strong> global page loads.
+                    <strong class="text-accent-magenta"
+                      >Zero fixed infrastructure cost</strong
+                    >. <strong class="text-accent-cyan">100% test coverage</strong> on
+                    critical API endpoints.
+                  </p>
+                </div>
+                <a
+                  class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
+                  href="https://github.com/nachosag/notebooklm-gallery"
+                  target="_blank"
+                >
+                  ACCESS_SOURCE
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
                 </a>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-surface-dim border-t border-accent-cyan/10 py-12 w-full font-code-mono text-code-mono">
-<div class="flex flex-col md:flex-row items-center px-margin-mobile md:px-margin-desktop w-full max-w-screen-2xl mx-auto gap-8 opacity-80 hover:opacity-100 transition-opacity justify-center">
-<div class="flex flex-col md:flex-row gap-8 items-center">
-<div class="flex flex-col items-center md:items-end">
-<span class="text-accent-magenta text-[10px] tracking-[0.2em] mb-1">STATION_LOCALE</span>
-<div class="flex gap-4">
-<span class="text-on-surface-variant uppercase">34.6037° S</span>
-<span class="text-on-surface-variant uppercase">58.3816° W</span>
-</div>
-</div>
-<div class="w-12 h-12 flex items-center justify-center border border-accent-cyan/20 text-accent-cyan hover:border-accent-cyan transition-colors">
-<a href="https://github.com/nachosag" target="_blank">
-<span class="material-symbols-outlined">qr_code_2</span>
-</a>
-</div>
-</div>
-</div>
-</footer>
-<script>
-    // Nav click: reveal target section immediately before smooth-scrolling
-    let navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href && href.startsWith('#')) {
-                const target = document.querySelector(href);
-                if (target) {
-                    target.querySelectorAll('.reveal:not(.active)').forEach(el => {
-                        el.classList.add('active');
-                    });
-                }
-            }
-        });
-    });
+              </div>
+            </div>
+            <!-- MakerDAO Job Monitor -->
+            <div
+              class="reveal delay-[300ms] group relative bg-background border border-accent-cyan/10 p-1 hover:border-accent-cyan/40 transition-all hover-lift flex flex-col"
+            >
+              <div
+                class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div class="p-6 flex flex-col flex-1">
+                <div class="flex justify-between items-start mb-6">
+                  <span
+                    class="font-code-mono text-xs text-on-surface-variant tracking-widest"
+                    >// PROJECT_004</span
+                  >
+                  <span class="material-symbols-outlined text-accent-cyan text-sm"
+                    >database</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-h1 text-xl mb-4 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  MAKERDAO MONITOR
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >TypeScript</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >ethers.js</span
+                  >
+                  <span
+                    class="bg-surface-container text-[10px] px-2 py-1 font-code-mono text-accent-cyan"
+                    >Node.js</span
+                  >
+                </div>
+                <div class="border border-accent-magenta/30 p-4 mb-6 bg-accent-magenta/5">
+                  <p
+                    class="text-[11px] font-code-mono text-accent-magenta uppercase mb-1"
+                  >
+                    Challenge_Report:
+                  </p>
+                  <p class="text-xs text-on-surface-variant leading-snug">
+                    <strong class="text-accent-magenta">On-chain Ethereum</strong>
+                    monitoring for
+                    <strong class="text-accent-cyan">MakerDAO Sequencer</strong> contract.
+                    Direct <strong class="text-accent-cyan">ABI interaction</strong> via
+                    <strong class="text-accent-cyan">ethers.js</strong>, polling loop
+                    scanning <strong class="text-accent-cyan">5,000+ blocks</strong> on
+                    startup.
+                    <strong class="text-accent-cyan">Multi-channel alerting</strong>
+                    (Discord, Slack) behind a shared interface.
+                    <strong class="text-accent-magenta">Full dependency injection</strong>
+                    across every layer.
+                  </p>
+                </div>
+                <a
+                  class="flex items-center gap-2 font-code-mono text-xs text-accent-cyan hover:gap-4 transition-all mt-auto"
+                  href="https://github.com/nachosag/wonderland-challenge"
+                  target="_blank"
+                >
+                  ACCESS_SOURCE
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Project Explorer -->
+      <section
+        class="py-24 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto"
+        id="projects"
+      >
+        <div
+          class="reveal flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8"
+        >
+          <div>
+            <span class="font-code-mono text-accent-cyan tracking-widest mb-2 uppercase"
+              >// REPOSITORY_INDEX</span
+            >
+            <h2 class="font-headline-h1 text-3xl text-primary uppercase">
+              PROJECT_EXPLORER
+            </h2>
+          </div>
+          <div class="flex flex-wrap gap-4 font-code-mono text-[10px] uppercase">
+            <button
+              class="px-4 py-2 bg-accent-magenta text-background font-bold tracking-widest hover:scale-105 transition-transform filter-btn active"
+              onclick="filterProjects('all')"
+            >
+              ALL
+            </button>
+            <button
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              onclick="filterProjects('backend')"
+            >
+              BACKEND
+            </button>
+            <button
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              onclick="filterProjects('algorithms')"
+            >
+              ALGORITHMS
+            </button>
+            <button
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              onclick="filterProjects('serverless')"
+            >
+              CLOUD
+            </button>
+            <button
+              class="px-4 py-2 border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 transition-all filter-btn"
+              onclick="filterProjects('fullstack')"
+            >
+              UI/UX
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          id="explorer-grid"
+        >
+          <!-- sigrh -->
+          <div
+            class="reveal bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="backend"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/sigrh"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >sigrh</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+          </div>
+          <!-- cdm-calculator -->
+          <div
+            class="reveal delay-[50ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="algorithms"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/cdm-calculator"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >cdm-calculator</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
+          </div>
+          <!-- human-clustering -->
+          <div
+            class="reveal delay-[100ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="algorithms"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/human-clustering"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >human-clustering</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">algorithms</span>
+          </div>
+          <!-- lights-out-game -->
+          <div
+            class="reveal delay-[150ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="backend"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/lights-out-game"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >lights-out-game</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">games</span>
+          </div>
+          <!-- wonderland-challenge -->
+          <div
+            class="reveal delay-[200ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="backend"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/wonderland-challenge"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >wonderland-challenge</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+          </div>
+          <!-- siu-guarani-clone -->
+          <div
+            class="reveal delay-[250ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="backend"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/siu-guarani-clone"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >siu-guarani-clone</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">academic</span>
+          </div>
+          <!-- notebooklm-gallery -->
+          <div
+            class="reveal delay-[300ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="serverless"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/notebooklm-gallery"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >notebooklm-gallery</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">serverless</span>
+          </div>
+          <!-- async-api -->
+          <div
+            class="reveal delay-[350ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="backend"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/async-api"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >async-api</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+          </div>
+          <!-- github-activity-cli -->
+          <div
+            class="reveal delay-[400ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="fullstack"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/github-activity-cli"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >github-activity-cli</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">cli</span>
+          </div>
+          <!-- notes-app -->
+          <div
+            class="reveal delay-[450ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="fullstack"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/notes-app"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >notes-app</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">fullstack</span>
+          </div>
+          <!-- auth-flow -->
+          <div
+            class="reveal delay-[500ms] bg-surface-container-low border border-accent-cyan/5 p-4 flex justify-between items-center hover:border-accent-cyan/30 transition-all group hover-lift"
+            data-cat="backend"
+          >
+            <div class="flex items-center gap-3">
+              <span
+                class="material-symbols-outlined text-accent-cyan/40 group-hover:text-accent-cyan transition-colors"
+                >folder</span
+              >
+              <a
+                href="https://github.com/nachosag/auth-flow"
+                target="_blank"
+                class="font-code-mono text-sm text-on-surface-variant hover:text-accent-cyan transition-colors"
+                >auth-flow</a
+              >
+            </div>
+            <span class="text-[10px] font-code-mono text-accent-yellow">backend</span>
+          </div>
+        </div>
+      </section>
+      <!-- Tech Stack -->
+      <section
+        class="py-32 bg-background relative border-y border-accent-cyan/5"
+        id="stack"
+      >
+        <div class="px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto">
+          <div class="reveal flex flex-col mb-16 text-center">
+            <span
+              class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase"
+              >// CAPABILITY_MATRIX</span
+            >
+            <h2 class="font-headline-h1 text-4xl text-primary uppercase">TECH_STACK</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-12">
+            <div
+              class="reveal hover-lift hover-cyan p-2 border border-transparent rounded transition-all"
+            >
+              <h4
+                class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase"
+              >
+                LANGUAGES
+              </h4>
+              <div class="flex flex-col gap-4">
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >TypeScript</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Python</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Java</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Go</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+            <div
+              class="reveal delay-[100ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all"
+            >
+              <h4
+                class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase"
+              >
+                FRONTEND
+              </h4>
+              <div class="flex flex-col gap-4">
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >React</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Angular</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Zustand</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Vite</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Vanilla CSS</span
+                >
+              </div>
+            </div>
+            <div
+              class="reveal delay-[200ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all"
+            >
+              <h4
+                class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase"
+              >
+                BACKEND
+              </h4>
+              <div class="flex flex-col gap-4">
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >FastAPI</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Express</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Nest</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >SQLModel</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >SQLAlchemy</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Cloudflare Workers</span
+                >
+              </div>
+            </div>
+            <div
+              class="reveal delay-[300ms] hover-lift hover-cyan p-2 border border-transparent rounded transition-all"
+            >
+              <h4
+                class="font-code-mono text-xs text-accent-cyan mb-6 tracking-widest border-b border-accent-cyan/20 pb-2 uppercase"
+              >
+                INFRA
+              </h4>
+              <div class="flex flex-col gap-4">
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Docker</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Docker Compose</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Cloudflare Pages</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Wrangler CLI</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >GitHub Actions</span
+                >
+              </div>
+            </div>
+            <div
+              class="reveal delay-[400ms] hover-lift hover-magenta p-2 border border-transparent rounded transition-all"
+            >
+              <h4
+                class="font-code-mono text-xs text-accent-magenta mb-6 tracking-widest border-b border-accent-magenta/20 pb-2 uppercase"
+              >
+                DATA
+              </h4>
+              <div class="flex flex-col gap-4">
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >PostgreSQL</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >MySQL</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >SQLite</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >MongoDB</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Cassandra</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Redis</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Cloudflare D1 / R2</span
+                >
+              </div>
+            </div>
+            <div
+              class="reveal delay-[500ms] hover-lift hover-yellow p-2 border border-transparent rounded transition-all"
+            >
+              <h4
+                class="font-code-mono text-xs text-accent-yellow mb-6 tracking-widest border-b border-accent-yellow/20 pb-2 uppercase"
+              >
+                PIPELINE
+              </h4>
+              <div class="flex flex-col gap-4">
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Git</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >GitHub Actions</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Pytest</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Vitest</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >Playwright</span
+                >
+                <span class="text-sm font-code-mono text-on-surface-variant uppercase"
+                  >oxlint</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Workflow Section -->
+      <section
+        class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto overflow-hidden"
+        id="workflow"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Terminal Pipeline Diagram -->
+          <div class="reveal">
+            <div
+              class="bg-surface-container-lowest border border-accent-magenta/20 rounded-lg overflow-hidden shadow-2xl terminal-pulse"
+            >
+              <div
+                class="terminal-header h-10 px-4 flex items-center justify-between border-b border-accent-magenta/10"
+              >
+                <div class="flex gap-2">
+                  <div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
+                  <div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
+                  <div class="w-3 h-3 rounded-full bg-accent-magenta/40"></div>
+                </div>
+                <span class="font-code-mono text-xs opacity-50 uppercase tracking-widest"
+                  >pipeline_schema.ascii</span
+                >
+              </div>
+              <div
+                class="p-8 flex flex-col gap-3 font-code-mono text-[11px] md:text-sm leading-relaxed flicker-overlay"
+              >
+                <div
+                  class="flex items-center gap-3 px-2 py-2 rounded border border-accent-cyan/20 bg-accent-cyan/5"
+                >
+                  <span class="text-accent-magenta font-bold uppercase tracking-widest"
+                    >GENTLE-AI SDD PIPELINE</span
+                  >
+                </div>
 
-    // IntersectionObserver: add .active when sections scroll into view
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-cyan font-bold w-24 shrink-0">EXPLORE</span>
+                  <span class="text-accent-cyan">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Investigate &amp; clarify requirements</span
+                  >
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-cyan font-bold w-24 shrink-0">PROPOSE</span>
+                  <span class="text-accent-cyan">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Create change proposal with intent &amp; scope</span
+                  >
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-yellow font-bold w-24 shrink-0">SPEC</span>
+                  <span class="text-accent-yellow">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Delta specs: requirements, scenarios, acceptance</span
+                  >
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-yellow font-bold w-24 shrink-0">DESIGN</span>
+                  <span class="text-accent-yellow">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Technical design, architecture, data models, APIs</span
+                  >
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-yellow font-bold w-24 shrink-0">TASKS</span>
+                  <span class="text-accent-yellow">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Break into reviewable implementation units</span
+                  >
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-magenta font-bold w-24 shrink-0">APPLY</span>
+                  <span class="text-accent-magenta">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Implement with work-unit commits, TDD when supported</span
+                  >
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-magenta font-bold w-24 shrink-0">VERIFY</span>
+                  <span class="text-accent-magenta">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Run tests, prove spec &amp; design compliance</span
+                  >
+                </div>
+                <div class="flex items-center gap-3 px-2">
+                  <span class="w-6"></span>
+                  <span class="text-accent-magenta font-bold w-24 shrink-0">ARCHIVE</span>
+                  <span class="text-accent-magenta">→</span>
+                  <span class="text-on-surface-variant/60 flex-1"
+                    >Sync delta specs, close change</span
+                  >
+                </div>
+
+                <div
+                  class="flex items-center gap-2 px-2 py-2 mt-4 rounded border border-accent-magenta/20 bg-accent-magenta/5"
+                >
+                  <span class="text-accent-magenta font-bold">QUALITY GATES:</span>
+                  <span class="text-accent-cyan">TDD</span>
+                  <span class="text-on-surface-variant/60">·</span>
+                  <span class="text-accent-cyan">Fresh Reviews</span>
+                  <span class="text-on-surface-variant/60">·</span>
+                  <span class="text-accent-cyan">Judgment Day</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pillar Cards -->
+          <div class="reveal delay-[200ms]">
+            <span
+              class="font-code-mono text-accent-magenta tracking-widest mb-2 uppercase"
+              >// DEVELOPMENT_METHODOLOGY</span
+            >
+            <h2 class="font-headline-h1 text-4xl text-primary mb-12 uppercase">
+              ENGINEERING_LIFECYCLE
+            </h2>
+            <div class="space-y-6">
+              <div
+                class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift"
+              >
+                <h4
+                  class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  01. REQUIREMENT_ANALYSIS
+                </h4>
+                <p class="text-sm text-on-surface-variant">
+                  Breaking down stakeholder needs into
+                  <strong class="text-accent-cyan">clear, testable contracts</strong>.
+                  <strong class="text-accent-magenta">Spec-driven development</strong>
+                  ensures every feature has
+                  <strong class="text-accent-cyan">defined success criteria</strong>
+                  before a single line of code is written.
+                </p>
+              </div>
+              <div
+                class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift"
+              >
+                <h4
+                  class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  02. ARCHITECTURAL_BLUEPRINT
+                </h4>
+                <p class="text-sm text-on-surface-variant">
+                  Designing <strong class="text-accent-cyan">modular systems</strong> with
+                  <strong class="text-accent-cyan">clean separation of concerns</strong> —
+                  controllers, services, repositories.
+                  <strong class="text-accent-magenta">Dependency injection</strong>
+                  enables
+                  <strong class="text-accent-cyan">true test isolation</strong> and future
+                  flexibility without rewiring.
+                </p>
+              </div>
+              <div
+                class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift"
+              >
+                <h4
+                  class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  03. ITERATIVE_DEVELOPMENT
+                </h4>
+                <p class="text-sm text-on-surface-variant">
+                  <strong class="text-accent-cyan"
+                    >Spec-driven development pipeline</strong
+                  >:
+                  <strong class="text-accent-magenta"
+                    >explore → propose → spec → design → tasks → apply → verify →
+                    archive</strong
+                  >. Each phase
+                  <strong class="text-accent-cyan">gates quality</strong> and catches
+                  drift before it compounds downstream.
+                </p>
+              </div>
+              <div
+                class="bg-surface-container-low p-6 border border-accent-cyan/10 hover:border-accent-cyan transition-all group hover-lift"
+              >
+                <h4
+                  class="font-headline-h1 text-sm tracking-widest text-on-surface mb-2 group-hover:text-accent-cyan transition-colors uppercase"
+                >
+                  04. QUALITY_ASSURANCE
+                </h4>
+                <p class="text-sm text-on-surface-variant">
+                  <strong class="text-accent-cyan">Red-green-refactor TDD</strong> cycle
+                  when the stack supports it.
+                  <strong class="text-accent-cyan">Fresh-context reviews</strong> catching
+                  drift.
+                  <strong class="text-accent-magenta"
+                    >Judgment Day adversarial verification</strong
+                  >
+                  — blind dual review, fix, re-judge. No rubber-stamp approvals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section
+        class="py-32 px-margin-mobile md:px-margin-desktop max-w-screen-2xl mx-auto text-center border-t border-accent-cyan/5"
+        id="contact"
+      >
+        <div class="reveal max-w-2xl mx-auto">
+          <span
+            class="font-code-mono text-accent-magenta tracking-widest mb-4 uppercase block"
+            >// TRANSMISSION_READY</span
+          >
+          <h2
+            class="font-headline-h1 text-5xl md:text-6xl text-primary mb-12 uppercase glow-magenta flicker-overlay"
+          >
+            ESTABLISH CONNECTION
+          </h2>
+          <p class="text-on-surface-variant mb-16 text-lg font-code-mono">
+            Open to
+            <strong class="text-accent-cyan">remote backend engineering roles</strong> and
+            <strong class="text-accent-magenta">interesting technical challenges</strong>.
+            Let's talk about <strong class="text-accent-cyan">systems</strong>,
+            <strong class="text-accent-cyan">architecture</strong>, or
+            <strong class="text-accent-cyan">problems worth solving</strong>.
+          </p>
+          <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <a
+              class="w-full md:w-auto bg-accent-cyan text-background px-10 py-5 font-code-mono font-bold uppercase clipped-corner glow-cyan hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(0,245,255,0.2)] hover:shadow-[0_0_40px_rgba(0,245,255,0.4)]"
+              href="mailto:borlenghi.work@gmail.com"
+            >
+              BORLENGHI.WORK@GMAIL.COM
+            </a>
+            <a
+              class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3"
+              href="https://github.com/nachosag"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined">link</span> GITHUB
+            </a>
+            <a
+              class="w-full md:w-auto border border-accent-cyan/30 text-accent-cyan px-10 py-5 font-code-mono uppercase clipped-corner hover:bg-accent-cyan/10 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-3"
+              href="https://linkedin.com/in/ignacio-borlenghi-74b720221"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined">badge</span> LINKEDIN
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-surface-dim border-t border-accent-cyan/10 py-12 w-full font-code-mono text-code-mono"
+    >
+      <div
+        class="flex flex-col md:flex-row items-center px-margin-mobile md:px-margin-desktop w-full max-w-screen-2xl mx-auto gap-8 opacity-80 hover:opacity-100 transition-opacity justify-center"
+      >
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="flex flex-col items-center md:items-end">
+            <span class="text-accent-magenta text-[10px] tracking-[0.2em] mb-1"
+              >STATION_LOCALE</span
+            >
+            <div class="flex gap-4">
+              <span class="text-on-surface-variant uppercase">34.6037° S</span>
+              <span class="text-on-surface-variant uppercase">58.3816° W</span>
+            </div>
+          </div>
+          <div
+            class="w-12 h-12 flex items-center justify-center border border-accent-cyan/20 text-accent-cyan hover:border-accent-cyan transition-colors"
+          >
+            <a href="https://github.com/nachosag" target="_blank">
+              <span class="material-symbols-outlined">qr_code_2</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Nav click: reveal target section immediately before smooth-scrolling
+      let navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          const href = link.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            const target = document.querySelector(href);
+            if (target) {
+              target.querySelectorAll(".reveal:not(.active)").forEach((el) => {
+                el.classList.add("active");
+              });
+            }
+          }
+        });
+      });
+
+      // IntersectionObserver: add .active when sections scroll into view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                if(entry.target.querySelector('.typewriter')) {
-                    triggerTypewriter(entry.target.querySelector('.typewriter'));
-                }
+              entry.target.classList.add("active");
+              if (entry.target.querySelector(".typewriter")) {
+                triggerTypewriter(entry.target.querySelector(".typewriter"));
+              }
             }
-        });
-    }, { threshold: 0.1 });
+          });
+        },
+        { threshold: 0.1 },
+      );
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-    function triggerTypewriter(element) {
+      function triggerTypewriter(element) {
         if (element.dataset.typed === "true") return;
         const text = element.dataset.text || element.innerText;
-        element.innerHTML = '';
+        element.innerHTML = "";
         element.dataset.typed = "true";
-        
+
         let i = 0;
         const speed = 100;
-        
+
         function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            } else {
-                if (text === "NACHOSAG") {
-                    element.innerHTML = 'NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span>';
-                }
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            if (text === "NACHOSAG") {
+              element.innerHTML =
+                'NACHO<span class="text-accent-cyan" style="text-shadow: rgba(0, 245, 255, 0.5) 0px 0px 10px, rgba(0, 245, 255, 0.3) 0px 0px 20px;">SAG</span>';
             }
+          }
         }
         type();
-    }
+      }
 
-    navLinks = document.querySelectorAll('nav a');
-    // Map section IDs to nav link IDs (multiple sections can map to same nav item)
-    const sectionToNav = {
-      'home': 'home',
-      'about': 'about',
-      'featured-projects': 'projects',
-      'projects': 'projects',
-      'stack': 'stack',
-      'workflow': 'workflow',
-      'contact': 'contact'
-    };
+      navLinks = document.querySelectorAll("nav a");
+      // Map section IDs to nav link IDs (multiple sections can map to same nav item)
+      const sectionToNav = {
+        home: "home",
+        about: "about",
+        "featured-projects": "projects",
+        projects: "projects",
+        stack: "stack",
+        workflow: "workflow",
+        contact: "contact",
+      };
 
-    window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         let currentSection = "";
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll("section");
         const scrollPosition = window.scrollY + 150;
-        
-        const isAtBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50;
+
+        const isAtBottom =
+          window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 50;
 
         if (isAtBottom) {
-            currentSection = "contact";
+          currentSection = "contact";
         } else {
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollPosition >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (scrollPosition >= sectionTop) {
+              currentSection = section.getAttribute("id");
+            }
+          });
         }
 
         // Resolve section ID to nav link ID
         const currentNav = sectionToNav[currentSection] || currentSection;
 
-        navLinks.forEach(link => {
-            link.classList.remove('text-accent-cyan', 'border-b', 'border-accent-cyan', 'pb-1');
-            link.classList.add('text-on-surface-variant');
-            if (link.getAttribute('href') === `#${currentNav}`) {
-                link.classList.add('text-accent-cyan', 'border-b', 'border-accent-cyan', 'pb-1');
-                link.classList.remove('text-on-surface-variant');
-            }
-        });
-    });
-
-    window.dispatchEvent(new Event('scroll'));
-
-    function filterProjects(cat) {
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.remove(
-                'bg-accent-cyan', 'bg-accent-magenta', 'text-background', 'font-bold'
+        navLinks.forEach((link) => {
+          link.classList.remove(
+            "text-accent-cyan",
+            "border-b",
+            "border-accent-cyan",
+            "pb-1",
+          );
+          link.classList.add("text-on-surface-variant");
+          const linkSection = link.getAttribute("href")?.replace("#", "");
+          if (linkSection && sectionToNav[linkSection] === currentNav) {
+            link.classList.add(
+              "text-accent-cyan",
+              "border-b",
+              "border-accent-cyan",
+              "pb-1",
             );
-            btn.classList.add('border', 'border-accent-cyan/20', 'text-accent-cyan');
-            btn.style.background = '';
+            link.classList.remove("text-on-surface-variant");
+          }
+        });
+      });
+
+      window.dispatchEvent(new Event("scroll"));
+
+      function filterProjects(cat) {
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.remove(
+            "bg-accent-cyan",
+            "bg-accent-magenta",
+            "text-background",
+            "font-bold",
+          );
+          btn.classList.add("border", "border-accent-cyan/20", "text-accent-cyan");
+          btn.style.background = "";
         });
 
         const activeBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
         if (activeBtn) {
-            activeBtn.classList.remove(
-                'border', 'border-accent-cyan/20', 'text-accent-cyan', 'hover:bg-accent-cyan/10'
-            );
-            activeBtn.classList.add('bg-accent-magenta', 'text-background', 'font-bold', 'hover:brightness-110');
+          activeBtn.classList.remove(
+            "border",
+            "border-accent-cyan/20",
+            "text-accent-cyan",
+            "hover:bg-accent-cyan/10",
+          );
+          activeBtn.classList.add(
+            "bg-accent-magenta",
+            "text-background",
+            "font-bold",
+            "hover:brightness-110",
+          );
         }
 
-        document.querySelectorAll('#explorer-grid > div').forEach(card => {
-            const match = cat === 'all' || (card.dataset.cat || '').includes(cat);
-            card.style.display = match ? '' : 'none';
-            if (match) card.classList.add('active');
+        document.querySelectorAll("#explorer-grid > div").forEach((card) => {
+          const match = cat === "all" || (card.dataset.cat || "").includes(cat);
+          card.style.display = match ? "" : "none";
+          if (match) card.classList.add("active");
         });
-    }
-</script>
-</body>
+      }
+    </script>
+  </body>
 </html>
