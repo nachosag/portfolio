@@ -182,7 +182,7 @@ window.addEventListener("scroll", () => {
 window.dispatchEvent(new Event("scroll"));
 
 // Filter buttons event delegation
-document.querySelector(".flex.flex-wrap.gap-4")?.addEventListener("click", (e) => {
+document.getElementById("filter-bar")?.addEventListener("click", (e) => {
   const btn = e.target.closest(".filter-btn");
   if (btn?.dataset.filter) {
     filterProjects(btn.dataset.filter);
