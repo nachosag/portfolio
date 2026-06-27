@@ -53,7 +53,6 @@ if (mobileMenuBtn && navMenu) {
       }
       navMenu.classList.remove("hidden");
       navMenu.classList.add("md:flex");
-      navMenu.setAttribute("aria-hidden", "true");
     } else if (!menuOpen) {
       navMenu.classList.remove("md:flex");
       navMenu.classList.add("hidden");
@@ -198,7 +197,7 @@ function filterProjects(cat) {
       "font-bold",
       "hover:brightness-110",
     );
-    btn.classList.add("border", "border-accent-cyan/20", "text-accent-cyan");
+    btn.classList.add("border", "border-accent-cyan/20", "text-accent-cyan", "hover:bg-accent-cyan/10");
     btn.style.background = "";
     btn.setAttribute("aria-pressed", "false");
   });
