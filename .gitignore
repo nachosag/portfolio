@@ -1,3 +1,5 @@
 source-of-truth.md
 design/
 node_modules/
+playwright-report/
+test-results/
